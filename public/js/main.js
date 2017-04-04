@@ -144,6 +144,8 @@ $(document).ready(function () {
                 speed: 1500,
                 pause: 4500
             });
+        } else if ($('article').data('page') == 'stock') {
+            $('.wrapper').addClass('gray-background');
         }
     });
     //========================== вызов меню на малых экранах
@@ -295,3 +297,11 @@ $(document).ready(function () {
     }
 
     );
+
+
+
+$(window).on('resize', function () {
+    if ($('article').data('page') == 'stock') {
+        $('.col_1-3 .stock-item:even').prependTo();
+    }
+});

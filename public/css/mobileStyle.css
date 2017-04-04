@@ -1199,7 +1199,7 @@
 
 @media screen and (max-width: 768px) {
     h2.shares-name {
-        font-size: 28px
+        font-size: 20px;
     }
 }
 
@@ -1235,17 +1235,8 @@
 
 @media screen and (max-width: 1100px) {
     .grid.grid-pad.akcii.flex-grid {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
         padding-left: 20px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding-right: 20px
+        justify-content: center;
     }
 
     .grid.akcii img.head-img {
