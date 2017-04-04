@@ -1,0 +1,64 @@
+<IfModule mod_rewrite.c>
+
+
+    RewriteEngine On
+	
+	RewriteEngine on
+
+	RewriteCond %{HTTP_HOST} ^www.medstyle.kz$ [NC]
+	RewriteRule ^(.*)$ http://medstyle.kz/$1 [L,R=301]
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+	
+
+	
+</IfModule>
+
+# === 14.11.2016 ==========================================			
+Redirect 301 /services/dysport http://medstyle.kz/service/dysport
+Redirect 301 /services/plazmolifting-gel http://medstyle.kz/service/plazmolifting-gel
+Redirect 301 /services/uhod-za-kozhey http://medstyle.kz/service/uhod-za-kozhej
+Redirect 301 /services/poverhnostnye-glikolevye-pilingit http://medstyle.kz/service/poverhnostnye-glikolevye-pilingi
+Redirect 301 /services/ultraformer?width=304&height=397&inline=true	 http://medstyle.kz/service/ul-trazvukovoj-smas-lifting
+Redirect 301 /services/korrekciya-vesa-i-razrabotka-diety?inline=true http://medstyle.kz/service/korrekciya-vesa-i-razrabotka-diety
+Redirect 301 /services/disport http://medstyle.kz/service/dysport
+Redirect 301 /services/radiess http://medstyle.kz/service/radiesse
+Redirect 301 /services/omolozhenie-kozhi http://medstyle.kz/service
+Redirect 301 /content/udalenie-sosudov-na-lice-i-tele http://medstyle.kz/service/udalenie-sosudov-na-lice-i-tele
+Redirect 301 /content/starenie-kozhi-i-morshchiny	 http://medstyle.kz/problems/starenie-kozhi-i-morshiny
+Redirect 301 /tehnologii http://medstyle.kz/technology
+Redirect 301 /question http://medstyle.kz/questions
+Redirect 301 /content/radiess-revolyuciya-v-inekcionnyh-metodah-omolozheniya http://medstyle.kz/helpful/radiesse-—-revolyuciya-v-in-ekcionnyh-metodah-omolozheniya
+Redirect 301 /content/nyu-irina-veniaminovna http://medstyle.kz/specialist/nyu-irina-veniaminovna
+Redirect 301 /questions/starenie-kozhi-i-morshchiny http://medstyle.kz/problems/starenie-kozhi-i-morshiny
+Redirect 301 /services/chistka-lica-dekolte-i-spiny http://medstyle.kz/service/chistka-lica-dekol-te-i-spiny
+Redirect 301 /content/lazer-mediostar-next http://medstyle.kz/technology/lazer-mediostar-next
+Redirect 301 /content/korrekciya-kontura-lica-i-tela http://medstyle.kz/problems/korrekciya-kontura-lica-i-telaRedirect
+Redirect 301 /services/inekcii-lipolitikov http://medstyle.kz/service/in-ekcii-lipolitikov
+
+# === 09.12.2016 ==========================================	
+Redirect 301 /kontakty http://medstyle.kz/contacts
+Redirect 301 /services/mezoniti http://medstyle.kz/service/mezoniti
+Redirect 301 /services/niti-aptos-excellence-visage http://medstyle.kz/service/niti-aptos-excellence-visage
+Redirect 301 /services/rf-lifting http://medstyle.kz/service/rf-lifting
+Redirect 301 /content/rf-lifting http://medstyle.kz/service/rf-lifting
+Redirect 301 /services/aqualyx http://medstyle.kz/service/aqualyx
+Redirect 301 /services/niti-silhouette-soft http://medstyle.kz/service/niti-silhouette-soft
+Redirect 301 /services/otbelivanie-kozhi http://medstyle.kz/services
+Redirect 301 /sertificate http://medstyle.kz/about
+Redirect 301 /services/sredinnye-pilingi http://medstyle.kz/service/sredinnye-pilingi
+Redirect 301 /services/frakcionnyy-lazer http://medstyle.kz/service/frakcionnyj-lazer
+Redirect 301 /services/3d-lifting http://medstyle.kz/service/3d-lifting
+Redirect 301 /services/lazernaya-epilyaciya http://medstyle.kz/service/lazernaya-epilyaciya
+Redirect 301 /content/omarova-meruert-erbolovna http://medstyle.kz/specialist/omarova-meruert-erbolovna
+Redirect 301 /novinki http://medstyle.kz/news
+Redirect 301 /services/korrekciya-rubcov http://medstyle.kz/service/korrekciya-rubcov
+Redirect 301 /content/doktor-skulptor http://medstyle.kz/helpful/doktor-skul-ptor
+Redirect 301 /services/udalenie-sosudov-na-lice-i-tele http://medstyle.kz/service/udalenie-sosudov-na-lice-i-tele
+Redirect 301 /mobile/service/radiesse http://medstyle.kz/service/radiesse

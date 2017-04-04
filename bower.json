@@ -1,0 +1,11 @@
+{
+  "name": "arsiadmin",
+  "version": "0.1.0",
+  "description": "adminka wedding",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "moment": "~2.10.3",
+    "eonasdan-bootstrap-datetimepicker": "~4.15.35"
+  }
+}

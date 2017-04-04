@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестирование</title>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/simplegrid.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobileStyle.css">
+    <link rel="stylesheet" href="/css/smoothbox.css">
+    <link rel="stylesheet" href="/css/popup.css">
+    <script src="/js/jquery-1.8.3.js"></script>
+    <script src="/js/testing.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <a href="/">
+        <header class="header">
+            <div class="grid grid-pad">
+                <div class="col-1-2 col-head">
+                    <p class="left-text">Телефон для справок</p>
+
+                    <p class="left-text">(+7 727) 311-31-81</p>
+                </div>
+                <div class="col-1-2 col-head">
+                    <p class="right-text"><a href="#" class="header-link ask-me-popup">Задать вопрос</a></p>
+
+                    <p class="right-text"><a href="#" class="header-link consult-popup">Записаться на консультацию</a></p>
+                </div>
+            </div>
+        </header>
+    </a>
+    <nav class="main-menu">
+        <div class="menu-button">☰</div>
+        <div class="popup-for-menu">
+            <ul class="menu">
+                <li class="menu-item"><a href="/about" class="item">О клинике</a></li>
+                <li class="menu-item"><a href="/specialists" class="item ">Специалисты</a></li>
+                <li class="menu-item"><a href="/services" class="item active">Услуги</a></li>
+                <li class="menu-item"><a href="/technology" class="item">Технологии</a></li>
+                <li class="menu-item"><a href="/helpful" class="item">Полезное</a></li>
+                <li class="menu-item"><a href="/questions" class="item">Вопросы и ответы</a></li>
+                <li class="menu-item"><a href="/news" class="item">Новинки</a></li>
+                <li class="menu-item"><a href="/contacts" class="item">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+    <article class="content" data-page="recomend">
+        <div class="grid grid-pad">
+            <div class="col-1-1">
+            </div>
+        </div>
+        <div class="grid grid-pad testing-ans">
+            <div class="col-1-1">
+                <h1 class="test-title">Рекомендации основаны на ваших ответах</h1>
+            </div>
+            <div class="col-1-2 acp-after">
+                <div class="img-test">
+                    <img src="photo.png" alt="">
+                </div>
+                <p class="name">Неля Лукашова</p>
+                <p class="prof">Ведущий доктор,<br>дермакосметолог, диетолог</p>
+            </div>
+            <div class="col-1-2 left ret-1">
+                <div class="text append">
+                    Индивидуальность занимает в косметологии центральное место: косметология не точная наука с формулами и схемами. Строение тела, несмотря на внешнюю схожесть, индивидуально не меньше, чем тонкие и  едва заметные черты характера. Организм похожих людей может по-разному реагировать на одно и то же воздействие.
+                    <br><br>
+                    Чтобы избежать побочных эффектов и достичь результата, косметолог должен тщательно изучить пациента: без персонального подхода, даже новейшие методики не дадут требуемого эффекта.
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-pad testing-ans">
+            <div class=""></div>
+            <div class="col-1-2 bookmark">
+                <div class="gray">
+                    <img src="mark.png" alt="">
+                    <p class="text">
+                        Добавьте результат теста в закладки браузера, чтобы вернуться к нему позднее.
+                    </p>
+                    <button class="bookmark">Добавить</button>
+                </div>
+            </div>
+            <div class="col-1-2 left ret-2">
+                <div class="testing-ans-bloks">
+                    <div class="testing-answer">
+                        <p class="answ-title">3. Повышенная потливость</p>
+                        <p class="ans-text">Проблема эффективно корректируется инъекциями Dysport
+                            в зоне подмышечных впадин, ладоней, ступней.</p>
+                        <p class="ans-link"><a href="#" class="link-big">Инъекционные методики Dysport</a> →</p>
+                    </div>
+                    <div class="testing-answer">
+                        <p class="answ-title">7. Нежелательные волосы</p>
+                        <p class="ans-text">Нежелательные волосы на лице и теле? темные волосы над губой,
+                            на подбородке, на скулах, в подмышечных впадинах, на ногах, руках
+                            и в зоне бикини безболезенно удаляются лазерной эпиляцией
+                            на аппарате MeDioStar NeXT Asclepion (Германия). </p>
+                        <p class="ans-link"><a href="#" class="link-big">Лазерная эпиляция</a> →</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <footer class="footer">
+        <div class="grid grid-pad">
+            <div class="col-1-4">
+                <p class="string">© Medstyle — клиника эстетической медицины</p>
+                <p class="string"><a href="#" class="link ask-me-popup">Задать вопрос</a></p>
+
+                <p class="string"><a href="#" class="link consult-popup">Записаться на консультацию</a></p>
+            </div>
+            <div class="col-1-4">
+                <div class="block">
+                    <p class="string center">Алматы, ул. Каблукова, 270
+                        </br> ж/к «Мега Тауэрс», блок №3
+                        </br><a href="#" class="link">Карта проезда</a></p>
+                </div>
+
+            </div>
+            <div class="col-1-4">
+                <p class="string center">
+                    (727) 311-31-81 </br>
+                    +7 777 178-29-26</p>
+            </div>
+            <div class="col-1-4">
+                <p class="string right">Мы в <a href="#" class="link">Facebook</a></p>
+
+                <p class="string right">Сделано в <a href="#" class="link">ИнтерПро</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
