@@ -295,13 +295,21 @@ $(document).ready(function () {
         add_favorite(this);
     });
     }
-
     );
 
 
 
-$(window).on('resize', function () {
+$(window).on('load resize', function () {
     if ($('article').data('page') == 'stock') {
-        $('.col_1-3 .stock-item:even').prependTo();
+        if ($(window).width() <= '1000' && !$('.col_1-3:nth-child(3)').hasClass('hide-block')) {
+            $('.col_1-3:nth-child(3) .stock-item:even').addClass('removable').appendTo($('.col_1-3:nth-child(1)'));
+            $('.col_1-3:nth-child(3) .stock-item:odd').addClass('removable').appendTo($('.col_1-3:nth-child(2)'));
+            $('.col_1-3:nth-child(3)').addClass('hide-block');
+            $('.col_1-3 .stock-social').appendTo($('.col_1-3:nth-child(1)'));
+        } else if ($(window).width() > '1000' && $('.col_1-3:nth-child(3)').hasClass('hide-block')) {
+            $('.col_1-3:nth-child(1) .removable').removeClass('removable').appendTo($('.col_1-3:nth-child(3)'));
+            $('.col_1-3:nth-child(2) .removable').removeClass('removable').appendTo($('.col_1-3:nth-child(3)'));
+            $('.col_1-3:nth-child(3)').removeClass('hide-block');
+        }
     }
 });
