@@ -31,31 +31,33 @@
                 return $str;
             }
             ?>
-            @foreach($dom->special_offers_group as $item)
-                <?php $i++; ?>
-                @if($i <= 3)
-
-                    <div class="row">
-                        <div class="col-9-12">
-                            <h2 class="shares-name">
-                                <?php $link = wrap_in_link($item->prev_name_field, $item->slug_field); ?>
-                                {!! $link !!}
-                            </h2>
-                            <p class="shares-description">{{$item->prev_text_field}}</p>
+            <div class="rows">
+                @foreach($dom->special_offers_group as $item)
+                    <?php $i++; ?>
+                    @if($i <= 3)
+                        <div class="row">
+                            <div class="col-9-12">
+                                <h2 class="shares-name">
+                                    <?php $link = wrap_in_link($item->prev_name_field, $item->slug_field); ?>
+                                    {!! $link !!}
+                                </h2>
+                                <p class="shares-description">{{$item->prev_text_field}}</p>
+                            </div>
+                            <div class="col-3-12">
+                                <a href="{{$item->slug_field}}" class="shares-link">
+                                    <img src="/images/{{$item->prev_image->primary_link}}" alt="">
+                                    <p class="shares-date">{{$item->all_text_field}}</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-3-12">
-                            <a href="{{$item->slug_field}}" class="shares-link">
-                                <img src="/images/{{$item->prev_image->primary_link}}" alt="">
-                                <p class="shares-date">{{$item->all_text_field}}</p>
-                            </a>
-                        </div>
-                    </div>
-
-                @endif
-            @endforeach
-
-
+                    @endif
+                @endforeach
+            </div>
+            <div class="stock-social">
+                <img src="/img/stock-social.png" alt="" class="stock-social-img">
+                <p class="stock-social-descr">Получайте акции через WhatApp по номеру <span class="no-br">+7 777 178-29-26</span>
+                    и в&nbsp;нашем <a href="//facebook.com" class="stock-social-link">Facebook</a></p>
+            </div>
         </div>
-
     </article>
 @endsection

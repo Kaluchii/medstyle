@@ -3125,15 +3125,15 @@ a.go-to-test.right-side:hover {
 
 .grid.grid-pad.akcii.flex-grid {
     display: flex;
-    -webkit-flex-direction: column;
+    /* -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column;
-    max-width: 940px;
-    padding: 0 40px 50px 0px;
+    flex-direction: column; */
+    max-width: 1000px;
+    padding: 0 20px 50px 20px;
 }
 
 .akcii .col-3-12 img {
-    max-height: 230px;
+    max-height: 180px;
 }
 
 .flex-grid .row {
@@ -3152,7 +3152,7 @@ a.go-to-test.right-side:hover {
     align-items: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    min-height: 230px;
+    min-height: 170px;
     border-bottom: 1px solid #ccc;
 }
 .flex-grid .row:last-child {
@@ -3177,7 +3177,7 @@ a.go-to-test.right-side:hover {
 .flex-grid .col-9-12 {
     width: 100%;
     padding-right: 0;
-    max-height: 700px;
+    max-height: 650px;
 }
 
 .flex-grid .row .col-3-12 {
@@ -3186,14 +3186,14 @@ a.go-to-test.right-side:hover {
     text-align: right;
 }
 .akcii.flex-grid .row .col-3-12 {
-    max-width: 260px;
-    padding-right: 30px;
+    max-width: 240px;
+    padding-right: 40px;
 }
 .shares-link{
     position: relative;
 }
 h2.shares-name {
-    font-size: 32px;
+    font-size: 24px;
     font-family: RobotoCondensedRegular;
     color: #333;
     font-weight: 400;
@@ -3227,10 +3227,10 @@ h2.shares-name a:hover {
 }
 
 p.shares-description {
-    font-family: RobotoLight;
-    font-size: 20px;
+    /* font-family: RobotoLight; */
+    font-size: 16px;
     color: #666;
-    line-height: 1.5em;
+    line-height: 1.5;
     padding-bottom: 15px;
 }
 
@@ -3425,4 +3425,51 @@ p.shares-date:empty {
 
 .wrapper.gray-background {
     background: #f3f3f3
+}
+
+.stock-social {
+    text-align: center;
+    padding: 45px 20px;
+    min-width: 230px;
+    margin-left: 40px;
+    font-family: RobotoCondensedRegular;
+}
+.stock-item {
+    /*padding: 20px;
+    background-color: #ffffff;
+    margin: 10px 10px 20px;*/
+}
+.stock-social-descr {
+    font-size: 20px;
+    color: #333;
+    max-width: 190px;
+    margin: 35px auto 0;
+    line-height: 1.5;
+}
+.no-br {
+    white-space: nowrap;
+}
+.stock-social-link {
+    color: #cc0066;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#f0b2d1), to(#f0b2d1));
+    background: -webkit-linear-gradient(left, #f0b2d1, #f0b2d1 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#f0b2d1), to(#f0b2d1));
+    background: linear-gradient(left, #f0b2d1, #f0b2d1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0b2d1', endColorstr='#f0b2d1', GradientType=0);
+    background-position: 0 95%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    font-size: inherit;
+}
+
+.stock-social-link:hover {
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#b56679), to(#b56679));
+    background: -webkit-linear-gradient(left, #b56679, #b56679 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#b56679), to(#b56679));
+    background: linear-gradient(left, #b56679, #b56679 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b56679', endColorstr='#b56679', GradientType=0);
+    background-position: 0 95%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #903
 }
