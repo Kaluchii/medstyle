@@ -3,7 +3,7 @@
 @section('content')
     @include('front.meta', ['meta_description' => $static->seo_description_field, 'meta_keywords' => $static->seo_keywords_field])
     <?php $title = $static->page_title_field ?>
-    <article class="content akcii">
+    <article class="content akcii" data-page="stock">
         {{--<div class="content-head">--}}
             {{--<h1 class="content-head-title spec">{{$static->title_field}}</h1>--}}
             {{--<div class="grid grid-pad head-grid">--}}
@@ -53,10 +53,12 @@
                     @endif
                 @endforeach
             </div>
-            <div class="stock-social">
-                <img src="/img/stock-social.png" alt="" class="stock-social-img">
-                <p class="stock-social-descr">Получайте акции через WhatApp по номеру <span class="no-br">+7 777 178-29-26</span>
-                    и в&nbsp;нашем <a href="//facebook.com" class="stock-social-link">Facebook</a></p>
+            <div class="stock-info">
+                <div class="stock-social">
+                    <img src="/img/stock-social.png" alt="" class="stock-social-img">
+                    <p class="stock-social-descr">Получайте акции через WhatApp по номеру <span class="no-br">+7 777 178-29-26</span>
+                        и в&nbsp;нашем <a href="//facebook.com" class="stock-social-link">Facebook</a></p>
+                </div>
             </div>
         </div>
     </article>

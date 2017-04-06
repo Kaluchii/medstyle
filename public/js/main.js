@@ -144,6 +144,8 @@ $(document).ready(function () {
                 speed: 1500,
                 pause: 4500
             });
+        } else if ($('article').data('page') == 'stock') {
+            $('.wrapper').addClass('gray-background');
         }
     });
     //========================== вызов меню на малых экранах
