@@ -1197,12 +1197,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    h2.shares-name {
-        font-size: 28px
-    }
-}
-
 @media screen and (max-width: 600px) {
     .flex-grid .row, .flex-grid .row:nth-child(even) {
         -webkit-box-orient: vertical;
@@ -1270,16 +1264,20 @@
 
 @media screen and (max-width: 900px) {
     .grid.grid-pad.akcii.flex-grid {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .grid.akcii img.head-img {
         object-position: 55% 0
     }
 
+    .stock-info {
+        margin: 40px 0 0 0;
+        justify-content: center;
+    }
+
     .stock-social{
         margin-left: 0;
-        padding: 45px 0 0;
         display: flex;
         align-items: center;
         justify-content: center;
