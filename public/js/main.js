@@ -19,7 +19,7 @@ $(document).ready(function () {
                 $('.category-1-2').appendTo($('.editable'));
             }
         //  Страница "услуга"
-        }/* else if ($('article').data('page') == 'service') {
+        } else if ($('article').data('page') == 'service') {
 
             if($(window).width() < 1000) {
                 $('.information-block .social-buttons').prependTo($('article.content[data-page=service]'));
@@ -29,7 +29,7 @@ $(document).ready(function () {
                 $('article.content .social-buttons').appendTo($('.information-block'));
             }
 
-            if ($(window).width() <= '780') {
+            /*if ($(window).width() <= '780') {
                 $('.interest').each(function(i){
                     $(this).appendTo($('.col-1-2.int')).data('from',(i+1));
                 });
@@ -37,9 +37,9 @@ $(document).ready(function () {
                 $('.interest').each(function(i){
                     $(this).appendTo($('.fr-'+(i+1)));
                 });
-            }
+            }*/
         //  Вопросы и ответы
-        }*/ else if ($('article').data('page') == 'question') {
+        } else if ($('article').data('page') == 'question') {
             if ($(window).width() <= '700') {
                 $('.tofirst').prependTo($('.grid.grid-pad.question-page'));
             } else {
