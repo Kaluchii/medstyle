@@ -616,10 +616,6 @@
         object-position: 50% !important
     }
 
-    h3.category-name {
-        font-size: 24px
-    }
-
     p.technology-title {
         font-size: 26px
     }
@@ -1197,12 +1193,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    h2.shares-name {
-        font-size: 20px;
-    }
-}
-
 @media screen and (max-width: 600px) {
     .flex-grid .row, .flex-grid .row:nth-child(even) {
         -webkit-box-orient: vertical;
@@ -1230,17 +1220,6 @@
     .flex-grid .row .col-3-12, .flex-grid .row:nth-child(even) .col-3-12 {
         text-align: center;
         display: none
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .grid.grid-pad.akcii.flex-grid {
-        padding-left: 20px;
-        justify-content: center;
-    }
-
-    .grid.akcii img.head-img {
-        object-position: 55% 0
     }
 }
 
@@ -1276,6 +1255,37 @@
 
     .services-category-item__text {
         font-size: 14px
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .grid.grid-pad.akcii.flex-grid {
+        flex-direction: column;
+    }
+
+    .grid.akcii img.head-img {
+        object-position: 55% 0
+    }
+
+    .stock-info {
+        margin: 40px 0 0 0;
+        justify-content: center;
+    }
+
+    .stock-social{
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stock-social-img{
+        max-width: 130px;
+    }
+
+    .stock-social-descr{
+        max-width: 390px;
+        margin: 0 0 0 20px;
     }
 }
 
@@ -1465,6 +1475,14 @@
 
     .test-1 h3.block-name {
         font-size: 42px
+    }
+
+    .stock-social{
+        flex-direction: column;
+    }
+
+    .stock-social-descr{
+        margin: 20px 0 0;
     }
 }
 
