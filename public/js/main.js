@@ -125,13 +125,22 @@ $(document).ready(function () {
         if( !$('.main-menu').hasClass('fixed') ){
             menuTop = $('.header').outerHeight()+1;
         }
+        if ($('article').data('page') != 'index'){
+            if ($(window).width() > '1000' || $(window).scrollTop() < menuTop) {
+                $('.main-menu').removeClass('fixed');
+            }else {
+                $('.main-menu').addClass('fixed');
+            }
+        }
     }).on('scroll', function(){
-        if ($('article').data('page') == 'index') {
-            if( $(window).scrollTop() >= menuTop ){
+        if( $(window).scrollTop() >= menuTop ){
+            if ($('article').data('page') == 'index' || $(window).width() <= '1000') {
                 $('.main-menu').addClass('fixed');
             }else {
                 $('.main-menu').removeClass('fixed');
             }
+        }else {
+            $('.main-menu').removeClass('fixed');
         }
     });
 

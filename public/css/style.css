@@ -1270,7 +1270,7 @@ img.special-preview {
 }
 
 .grid.grid-pad.special-price {
-    padding: 10px 5px 60px 25px
+    padding: 0 5px 40px 25px;
 }
 
 .special-price .col-1-3:last-child {
@@ -2222,7 +2222,8 @@ span.discount {
     color: #fff;
     padding: 0 5px;
     font-size: 14px;
-    background: #c06
+    background: #c06;
+    white-space: nowrap;
 }
 
 .grid.grid-pad.news {
@@ -2911,6 +2912,9 @@ span.totalvotes:last-child {
     font-weight: 400;
     line-height: 1.1;
 }
+.service-proc__title--indentation {
+    padding-bottom: 20px;
+}
 
 .service-proc__sub-title {
     text-align: center;
@@ -3194,7 +3198,6 @@ a.go-to-test.right-side:hover {
     padding-right: 30px;
 }
 .shares-link{
-    position: relative;
 }
 h2.shares-name {
     font-size: 24px;
@@ -3231,7 +3234,6 @@ h2.shares-name a:hover {
 }
 
 p.shares-description {
-    /* font-family: RobotoLight; */
     font-size: 16px;
     color: #666;
     line-height: 1.5;
@@ -3397,15 +3399,12 @@ img.slide.desktop {
 }
 
 p.shares-date {
+    display: inline-block;
     font-size: 12px;
     color: #fff;
     line-height: 1.2;
     padding: 3px 10px 5px;
     background-color: #cd0067;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 25px;
     text-align: center;
     white-space: nowrap;
 }
@@ -3466,4 +3465,8 @@ p.shares-date:empty {
     background-size: 10px 1px;
     background-repeat: repeat-x;
     color: #903
+}
+
+.menu-wrap {
+    height: 49px;
 }

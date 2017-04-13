@@ -55,7 +55,7 @@ $(document).ready(function(){
             toolbar   : [
                 ['style', ['style', 'bold', 'italic', 'clear']],
                 ['insert', ['picture', 'link', 'video']],
-                ['paragraph', ['ul', 'ol']],
+                ['paragraph', ['ul', 'ol', 'paragraph']],
                 ['misc', ['fullscreen', 'codeview']]
             ],
             callbacks : {

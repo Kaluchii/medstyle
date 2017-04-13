@@ -1,6 +1,7 @@
 @section('special')
     <?php $count_sp = 0;?>
 <div class="grid grid-pad special-price">
+    <h2 class="service-proc__title service-proc__title--indentation">Акции и спецпредложения</h2>
     @foreach($special->special_offers_group as $item)
         <?php $count_sp++?>
         @if($count_sp <= 3)

@@ -561,10 +561,18 @@
     p.video-text {
         font-size: 18px
     }
+
+    .services .col-1-3{
+        width: 50%;
+    }
+
+    .services.col-1-3.editable{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-    .category, .col-1-3 {
+    .category, .col-1-3, .services .col-1-3 {
         display: block;
         width: 100%
     }
@@ -1157,7 +1165,7 @@
     }
 
     .grid.grid-pad.special-price {
-        padding: 10px 25px 60px
+        padding: 0 25px 25px;
     }
 }
 
@@ -1234,7 +1242,7 @@
     }
 
     .service-proc__title {
-        font-size: 60px
+        font-size: 44px;
     }
 
     .service-proc__sub-title {
@@ -1444,7 +1452,7 @@
     }
 
     .service-proc__title {
-        font-size: 52px
+        font-size: 42px;
     }
 
     .service-proc__sub-title {
@@ -1458,7 +1466,7 @@
     }
 
     .service-proc__title {
-        font-size: 42px
+        font-size: 38px;
     }
 
     .service-proc__sub-title {

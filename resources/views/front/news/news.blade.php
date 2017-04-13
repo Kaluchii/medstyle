@@ -42,11 +42,11 @@
                                     {!! $link !!}
                                 </h2>
                                 <p class="shares-description">{{$item->prev_text_field}}</p>
+                                <p class="shares-date">{{$item->all_text_field}}</p>
                             </div>
                             <div class="col-3-12">
                                 <a href="{{$item->slug_field}}" class="shares-link">
                                     <img src="/images/{{$item->prev_image->primary_link}}" alt="">
-                                    <p class="shares-date">{{$item->all_text_field}}</p>
                                 </a>
                             </div>
                         </div>

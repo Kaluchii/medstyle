@@ -21,7 +21,9 @@
 <body>
     <div class="wrapper">
         @yield('header')
-        @yield('menu')
+        <div class="menu-wrap">
+            @yield('menu')
+        </div>
         @yield('content')
         @yield('footer')
     </div>
