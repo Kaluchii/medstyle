@@ -20,7 +20,9 @@
 </head>
 <body>
     <div class="wrapper">
-        @yield('header')
+        <div class="header-wrap">
+            @yield('header')
+        </div>
         <div class="menu-wrap">
             @yield('menu')
         </div>
