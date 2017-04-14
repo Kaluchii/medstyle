@@ -5,7 +5,7 @@
 
 
         <div class="block">
-            <label>Превью специального предложения для главной</label>
+            <label>Превью специального предложения</label>
             <div class="image-load">
                 <div class="img-hide-block">
                     <input type="hidden" class="prefix" data-field-name="wrap" data-group="special_offers"
@@ -24,7 +24,7 @@
                            data-field-type="image" data-item-id="{{$item_special_offers->id_field}}"
                            data-block="dom_specials" value="{{$item_special_offers->wrap_image->icon_link}}">
                 </div>
-                <img src="/images/{{$item_special_offers->wrap_image->preview_link}}" class="prev"
+                <img src="/images/{{$item_special_offers->wrap_image->preview_link}}" class="preview"
                      data-field-name="wrap" data-block="dom_specials" data-group="special_offers"
                      data-item-id="{{$item_special_offers->id_field}}">
                 <div class="image-block-wrap">
@@ -46,6 +46,13 @@
                     </label>
                 </div>
             </div>
+        </div>
+        <div class="block">
+            <label>Текст на превью</label>
+            <input type="text" data-field-type="string" data-field-name="name" data-block="dom_specials"
+                   data-group="special_offers" class="input group_field"
+                   value="{{$item_special_offers->name_field}}"
+                   data-item-id="{{$item_special_offers->id_field}}" placeholder="Строка">
         </div>
         <div class="block">
             <label>Превью специального предложения для страницы акций (370х380px)</label>
