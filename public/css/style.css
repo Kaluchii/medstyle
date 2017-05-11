@@ -478,12 +478,12 @@ h1.content-head-title {
 }
 
 h3.category-name {
-    font-size: 20px;
-    font-family: RobotoCondensedBold;
+    font-size: 24px;
+    font-family: RobotoCondensedRegular;
     font-weight: 400;
     margin-top: 5px;
     color: #333;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 .category-name a.link {
@@ -2949,7 +2949,7 @@ span.totalvotes:last-child {
 }
 
 .services-category-item {
-    margin-top: 45px;
+    margin-top: 35px;
     width: 50%;
     display: flex;
 }
