@@ -155,6 +155,8 @@ $(document).ready(function () {
             });
         } else if ($('article').data('page') == 'stock') {
             $('.wrapper').addClass('gray-background');
+        } else if ($('.content-wrap').data('page') == 'technologies') {
+            $('.wrapper').addClass('gray-background2');
         }
     });
     //========================== вызов меню на малых экранах
