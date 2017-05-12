@@ -10,14 +10,14 @@
                 Его применение безопасно и не вызывает случайных побочных эффектов.</p>
             <div class="technologies__list trowelling-block">
                 <ul class="trowelling-block__list vertical-list">
-                    <li class="vertical-list__item technologies-item">
+                    <li class="vertical-list__item technologies-item movable">
                         <div class="technologies-item__img-wrap">
                             <img src="/dev_images/lpg.jpg" alt="" class="technologies-item__img">
                         </div>
                             <h3 class="technologies-item__title"><a href="#" class="technologies-item__link pink-link">LPG Cellu Endermolab (Франция)</a></h3>
                         <p class="technologies-item__text">Аппарат эффективен в точечной коррекции фигуры и устранении целлюлита. Процедуры повышают эластичность кожи, расщепляют локальные жировые отложения, запускают естественный лимфодренаж.</p>
                     </li>
-                    <li class="vertical-list__item technologies-item">
+                    <li class="vertical-list__item technologies-item movable">
                         <div class="technologies-item__img-wrap">
                             <img src="/dev_images/trio.jpg" alt="" class="technologies-item__img">
                         </div>

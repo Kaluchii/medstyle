@@ -99,6 +99,20 @@ $(document).ready(function () {
                 offsetY: 40,
                 blockElement: '.poleznoe-block-item'
             });
+        } else if ($('.content-wrap').data('page') == 'technologies') {
+            if($(window).width() <= 840) {
+                var count = $('.vertical-list:first-child .movable').length;
+                var half = count / 2 | 0;
+                $('.vertical-list:first-child .movable').each(function(i){
+                    if(i<half){
+                        $(this).prependTo($('.vertical-list:nth-child(2)'));
+                    }else{
+                        $(this).prependTo($('.vertical-list:nth-child(3)'));
+                    }
+                });
+            }else{
+                $('.vertical-list .movable').appendTo($('.vertical-list:first-child'));
+            }
         }
     }
 
