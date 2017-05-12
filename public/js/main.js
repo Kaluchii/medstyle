@@ -10,7 +10,7 @@ $(document).ready(function () {
     // Перестройка блоков контента на разных страницах на разных разрешениях
     function WindowSize() {
         //  Страница услуг
-        if ($('article').data('page') == 'services') {
+        /*if ($('content-wrap').data('page') == 'services') {
             if (($(window).width() <= '870') && ($(window).width() >= '600')) {
                 $('.category-1-1').appendTo($('.first'));
                 $('.category-1-2').appendTo($('.second'));
@@ -19,7 +19,7 @@ $(document).ready(function () {
                 $('.category-1-2').appendTo($('.editable'));
             }
         //  Страница "услуга"
-        } else if ($('article').data('page') == 'service') {
+        } else*/ if ($('article').data('page') == 'service') {
 
             if($(window).width() < 1000) {
                 $('.information-block .social-buttons').prependTo($('article.content[data-page=service]'));
@@ -171,6 +171,8 @@ $(document).ready(function () {
             $('.wrapper').addClass('gray-background');
         } else if ($('.content-wrap').data('page') == 'technologies') {
             $('.wrapper').addClass('gray-background2');
+        } else if ($('.content-wrap').data('page') == 'services') {
+            $('.wrapper').addClass('gray-background3');
         }
     });
     //========================== вызов меню на малых экранах
