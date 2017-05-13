@@ -10,16 +10,22 @@ $(document).ready(function () {
     // Перестройка блоков контента на разных страницах на разных разрешениях
     function WindowSize() {
         //  Страница услуг
-        /*if ($('content-wrap').data('page') == 'services') {
-            if (($(window).width() <= '870') && ($(window).width() >= '600')) {
-                $('.category-1-1').appendTo($('.first'));
-                $('.category-1-2').appendTo($('.second'));
-            } else if ($(window).width() >= '870') {
-                $('.category-1-1').appendTo($('.editable'));
-                $('.category-1-2').appendTo($('.editable'));
+        if ($('.content-wrap').data('page') == 'services') {
+            if($(window).width() <= 740) {
+                var count = $('.vertical-list:last-child .movable').length;
+                var half = count / 2 | 0;
+                $('.vertical-list:last-child .movable').each(function(i){
+                    if(i<half){
+                        $(this).appendTo($('.vertical-list:nth-child(1)'));
+                    }else{
+                        $(this).appendTo($('.vertical-list:nth-child(2)'));
+                    }
+                });
+            }else{
+                $('.vertical-list .movable').prependTo($('.vertical-list:last-child'));
             }
         //  Страница "услуга"
-        } else*/ if ($('article').data('page') == 'service') {
+        } else if ($('article').data('page') == 'service') {
 
             if($(window).width() < 1000) {
                 $('.information-block .social-buttons').prependTo($('article.content[data-page=service]'));
