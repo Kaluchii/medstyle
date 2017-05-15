@@ -11,49 +11,59 @@
             <div class="technologies__list trowelling-block">
                 <ul class="trowelling-block__list trowelling-block__list--technologies vertical-list">
                     <li class="vertical-list__item technologies-item movable">
-                        <div class="technologies-item__img-wrap">
-                            <img src="/dev_images/lpg.jpg" alt="" class="technologies-item__img">
-                        </div>
-                        <h3 class="technologies-item__title"><a href="#" class="technologies-item__link pink-link">LPG Cellu Endermolab (Франция)</a></h3>
+                        <a href="#" class="technologies-item__link">
+                            <div class="technologies-item__img-wrap">
+                                <img src="/dev_images/lpg.jpg" alt="" class="technologies-item__img">
+                            </div>
+                            <h3 class="technologies-item__title"><span class="technologies-item__link-text">LPG Cellu Endermolab (Франция)</span></h3>
+                        </a>
                         <p class="technologies-item__text">Аппарат эффективен в точечной коррекции фигуры и устранении целлюлита. Процедуры повышают эластичность кожи, расщепляют локальные жировые отложения, запускают естественный лимфодренаж.</p>
                     </li>
                     <li class="vertical-list__item technologies-item movable">
-                        <div class="technologies-item__img-wrap">
-                            <img src="/dev_images/trio.jpg" alt="" class="technologies-item__img">
-                        </div>
-                        <h3 class="technologies-item__title"><a href="#" class="technologies-item__link pink-link">Trio XT</a></h3>
+                        <a href="#" class="technologies-item__link">
+                            <div class="technologies-item__img-wrap">
+                                <img src="/dev_images/trio.jpg" alt="" class="technologies-item__img">
+                            </div>
+                            <h3 class="technologies-item__title"><span class="technologies-item__link-text">Trio XT</span></h3>
+                        </a>
                         <p class="technologies-item__text">Радиочастотный аппарат TRIO за счёт гипертермии увеличивает кровоток, это не только стимулирует выработку нового коллагена, но и активизирует процессы липолиза.</p>
                     </li>
                 </ul>
                 <ul class="trowelling-block__list trowelling-block__list--technologies vertical-list">
                     <li class="vertical-list__item technologies-item">
-                        <div class="technologies-item__img-wrap">
-                            <img src="/dev_images/mcl.jpg" alt="" class="technologies-item__img">
-                        </div>
-                        <h3 class="technologies-item__title"><a href="#" class="technologies-item__link pink-link">Лазер MCL-31 Dermablate</a></h3>
+                        <a href="#" class="technologies-item__link">
+                            <div class="technologies-item__img-wrap">
+                                <img src="/dev_images/mcl.jpg" alt="" class="technologies-item__img">
+                            </div>
+                            <h3 class="technologies-item__title"><span class="technologies-item__link-text">Лазер MCL-31 Dermablate</span></h3>
+                        </a>
                         <p class="technologies-item__text">MCL-31 — самая последняя версия из семейства эрбиевых лазеров компании Asclepion Laser Technologies (Германия).</p>
                     </li>
                     <li class="vertical-list__item technologies-item">
-                        <div class="technologies-item__img-wrap">
-                            <img src="/dev_images/mediostar.jpg" alt="" class="technologies-item__img">
-                        </div>
-                        <h3 class="technologies-item__title"><a href="#" class="technologies-item__link pink-link">Лазер MeDioStar Next</a></h3>
+                        <a href="#" class="technologies-item__link">
+                            <div class="technologies-item__img-wrap">
+                                <img src="/dev_images/mediostar.jpg" alt="" class="technologies-item__img">
+                            </div>
+                            <h3 class="technologies-item__title"><span class="technologies-item__link-text">Лазер MeDioStar Next</span></h3>
+                        </a>
                         <p class="technologies-item__text">Аппарат эффективен в точечной коррекции фигуры и устранении целлюлита. Процедуры повышают эластичность кожи, расщепляют локальные жировые отложения, запускают естественный лимфодренаж.</p>
                     </li>
                 </ul>
                 <ul class="trowelling-block__list trowelling-block__list--technologies vertical-list">
                     <li class="vertical-list__item technologies-item">
-                        <div class="technologies-item__img-wrap">
-                            <img src="/dev_images/ultraformer.jpg" alt="" class="technologies-item__img">
-                        </div>
-                        <h3 class="technologies-item__title"><a href="#" class="technologies-item__link pink-link">UltraFormer</a></h3>
+                        <a href="#" class="technologies-item__link">
+                            <div class="technologies-item__img-wrap">
+                                <img src="/dev_images/ultraformer.jpg" alt="" class="technologies-item__img">
+                            </div>
+                            <h3 class="technologies-item__title"><span class="technologies-item__link-text">UltraFormer</span></h3>
+                        </a>
                         <p class="technologies-item__text">UltraFormer эффективно воздействует на мягкие ткани и SMAS применяя неинвазивную технологию HIFU (Highintensity Focused Ultrasound).</p>
                     </li>
-                    <li class="vertical-list__item technologies-item social-block">
+                    <li class="vertical-list__item technologies-item technologies-item--center-align social-block">
                         <div class="technologies-item__img-wrap">
                             <img src="/img/stock-social.png" alt="" class="technologies-item__img">
                         </div>
-                        <h3 class="technologies-item__title"><a href="#" class="technologies-item__link pink-link">Наши новинки</a></h3>
+                        <h3 class="technologies-item__title">Следите за обновлениями</h3>
                         <p class="technologies-item__text">Мы регулярно обновляем наши аппаратные технологии и
                             добавляем услуги. Следите за обновлениями в
                             <a target="_blank" href="//facebook.com/medstyle.kz" class="technologies-item__link pink-link">Facebook</a> и Ваццапе по номеру
