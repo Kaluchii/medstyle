@@ -211,9 +211,12 @@ class FrontController extends Controller {
 	public function getTechnologys(QueryAgent $queryAgent){
 		$static = $queryAgent->getBlock('static_technology',[],[]);
 		$dom    = $queryAgent->getBlock('dom_technologys',['technologys'=>['sorter'=> 'ASC']],[]);
+		$services = $queryAgent->getGroupFlat('dom_services','services',[],[]);
 		return view('front/technology/technologys',[
 			'static'  			=> $static,
 			'dom'     			=> $dom,
+			'serv'              => $services,
+
 		]);
 	}
 	public function getTechnology(QueryAgent $queryAgent, $slug){
