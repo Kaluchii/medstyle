@@ -5,10 +5,37 @@
     <?php $title = $static->page_title_field ?>
     <section class="content-wrap" data-page="technologies">
         <div class="technologies">
-            <h1 class="technologies__block-title">Наши технологии</h1>
-            <p class="technologies__subtitle-text">Мы применяем оригинальное и сертифицированное европейское оборудование,  соответствующее технологическим стандартам Евросоюза.
-                Его применение безопасно и не вызывает случайных побочных эффектов.</p>
+            <h1 class="technologies__block-title">{{$static->title_field}}</h1>
+            <div class="technologies__subtitle-text">{!! $static->descriptions_field !!}</div>
             <div class="technologies__list trowelling-block">
+                <?php $i = 0 ?>
+                @foreach($dom as $item)
+                    @if( $i == 0 or $i == 1 or $i == 4 ) <ul class="trowelling-block__list trowelling-block__list--technologies vertical-list"> @endif
+                        <li class="vertical-list__item technologies-item @if( $i < 2 ) movable @endif">
+                            <a href="#" class="technologies-item__link">
+                                <div class="technologies-item__img-wrap">
+                                    <img src="/dev_images/lpg.jpg" alt="" class="technologies-item__img">
+                                </div>
+                                <h3 class="technologies-item__title"><span class="technologies-item__link-text">LPG Cellu Endermolab (Франция)</span></h3>
+                            </a>
+                            <p class="technologies-item__text"></p>
+                        </li>
+                        @if( $i+1 == $item->count() )
+                            <li class="vertical-list__item technologies-item technologies-item--center-align social-block">
+                                <div class="technologies-item__img-wrap">
+                                    <img src="/img/stock-social.png" alt="" class="technologies-item__img">
+                                </div>
+                                <h3 class="technologies-item__title">Следите за обновлениями</h3>
+                                <p class="technologies-item__text">Мы регулярно обновляем наши аппаратные технологии и
+                                    добавляем услуги. Следите за обновлениями в
+                                    <a target="_blank" href="//facebook.com/medstyle.kz" class="technologies-item__link pink-link">Facebook</a> и Ваццапе по номеру
+                                    <span class="no-br">+7 777 178-29-26</span>.</p>
+                            </li>
+                        @endif
+                        @if( $i == 0 or $i == 3 or $i == 5 ) </ul> @endif
+                    <?php $i++ ?>
+                @endforeach
+
                 <ul class="trowelling-block__list trowelling-block__list--technologies vertical-list">
                     <li class="vertical-list__item technologies-item movable">
                         <a href="#" class="technologies-item__link">

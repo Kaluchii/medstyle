@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 40px 20px 100px;
-  background: url("/dev_images/molecula.jpg") no-repeat right top;
 
   &__content-wrap{
     max-width: 1060px;
@@ -76,11 +75,15 @@
   }
 
   &__stock{
-    margin-left: 9px;
-    padding: 0 5px 2px;
-    border-radius: 3px;
     font-size: 14px;
-    background-color: #cc0066;
     color: #FFFFFF;
+    margin-left: 9px;
+    border-radius: 3px;
+    padding: 0 5px 2px;
+    background-color: #cc0066;
+
+    &:empty{
+      display: none;
+    }
   }
 }

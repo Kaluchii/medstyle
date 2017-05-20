@@ -4,94 +4,28 @@
 @include('front.meta', ['meta_description' => $services->seo_description_field, 'meta_keywords' => $services->seo_keywords_field])
     <?php $title = $services->page_title_field ?>
     <section class="content-wrap" data-page="services">
-        {{--<div class="grid grid-pad services testing">
-            {!! $services->descriptions_field !!} <p class="button"><a onClick="ga('send','event','Button','Click','Uslugi');" href="/age" class="go-to-test">Пройти тест</a></p>
-        </div>--}}
-        <div class="services-page">
+        <div class="services-page" style="background: url('/dev_images/molecula.jpg') no-repeat right top;">
             <div class="services-page__content-wrap">
-                <h1 class="services-page__block-title">УСЛУГИ</h1>
+                <h1 class="services-page__block-title">{{$services->title_field}}</h1>
                 <div class="test-block">
                     <p class="test-block__text">Чтобы помочь вам с выбором процедуры, мы разработали несложный тест</p>
                     <a href="/age" onClick="ga('send','event','Button','Click','Uslugi');" class="test-block__button">Пройти тест</a>
                 </div>
                 <div class="services-page__category-list trowelling-block">
-                    <ul class="trowelling-block__list trowelling-block__list--services vertical-list">
-                        <li class="vertical-list__item category-item">
-                            <h3 class="category-item__title" id="Инъекционные методики" {{--id="{{$item_category->category_title_field}}"--}}>Инъекционные методики</h3>
-                            <ul class="category-item__services-list strings-list">
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">3D-лифтинг</a><span class="strings-list__stock">Акция</span></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоармирование</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Plasmolifting крем</a><span class="strings-list__stock">Акция</span></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a><span class="strings-list__stock">Акция</span></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Биоревитализация</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="trowelling-block__list trowelling-block__list--services vertical-list">
-                        <li class="vertical-list__item category-item">
-                            <h3 class="category-item__title" id="Нитевые подтяжки">Нитевые подтяжки</h3>
-                            <ul class="category-item__services-list strings-list">
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a><span class="strings-list__stock">Акция</span></li>
-                            </ul>
-                        </li>
-                        <li class="vertical-list__item category-item">
-                            <h3 class="category-item__title" id="Пилинги и уход за кожей">Пилинги и уход за кожей</h3>
-                            <ul class="category-item__services-list strings-list">
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                            </ul>
-                        </li>
-                        <li class="vertical-list__item category-item">
-                            <h3 class="category-item__title" id="Уход за телом">Уход за телом</h3>
-                            <ul class="category-item__services-list strings-list">
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a><span class="strings-list__stock">Акция</span></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="trowelling-block__list trowelling-block__list--services vertical-list">
-                        <li class="vertical-list__item category-item movable">
-                            <h3 class="category-item__title" id="Аппаратные методики">Аппаратные методики</h3>
-                            <ul class="category-item__services-list strings-list">
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a><span class="strings-list__stock">Акция</span></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a><span class="strings-list__stock">Акция</span></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                            </ul>
-                        </li>
-                        <li class="vertical-list__item category-item movable">
-                            <h3 class="category-item__title" id="Дерматология">Дерматология</h3>
-                            <ul class="category-item__services-list strings-list">
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                                <li class="strings-list__item"><a href="#" class="strings-list__link pink-link">Контурная пластика</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <?php $i = 0 ?>
+                    @foreach($category as $item_category)
+                        @if( $i == 0 or $i == 1 or $i == 4 ) <ul class="trowelling-block__list trowelling-block__list--services vertical-list"> @endif
+                            <li class="vertical-list__item category-item @if( $i > 3 ) movable @endif">
+                                <h3 class="category-item__title" id="{{$item_category->category_title_field}}">{{$item_category->category_title_field}}</h3>
+                                <ul class="category-item__services-list strings-list">
+                                    @foreach($item_category->services_group as $item_service)
+                                        <li class="strings-list__item"><a href="/service/{{$item_service->slug_field}}" class="strings-list__link pink-link">{{$item_service->name_field}}</a><span class="strings-list__stock">{{$item_service->discount_field}}</span></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @if( $i == 0 or $i == 3 or $i == 5 ) </ul> @endif
+                        <?php $i++ ?>
+                    @endforeach
                 </div>
             </div>
         </div>
