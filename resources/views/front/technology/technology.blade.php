@@ -29,7 +29,7 @@
     </div>
 
 
-    <article class="content" itemscope itemtype="http://schema.org/Service">
+    <article class="content" data-page="technology" itemscope itemtype="http://schema.org/Service">
         <div class="grid content text-block">
             <div class="col-1-2">
                 <div class="first-paragraph">

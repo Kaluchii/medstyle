@@ -34,17 +34,17 @@ $(document).ready(function () {
                 $('article.content .all-product:first-child').appendTo($('.information-block'));
                 $('article.content .social-buttons').appendTo($('.information-block'));
             }
+        //  Страница "технология"
+        } else if ($('article').data('page') == 'technology') {
 
-            /*if ($(window).width() <= '780') {
-                $('.interest').each(function(i){
-                    $(this).appendTo($('.col-1-2.int')).data('from',(i+1));
-                });
-            } else {
-                $('.interest').each(function(i){
-                    $(this).appendTo($('.fr-'+(i+1)));
-                });
-            }*/
-        //  Вопросы и ответы
+            if($(window).width() < 1000) {
+                $('.information-block .social-buttons').prependTo($('article.content[data-page=technology]'));
+                $('.information-block .all-product').prependTo($('article.content[data-page=technology]'));
+            }else{
+                $('article.content .all-product:first-child').appendTo($('.information-block'));
+                $('article.content .social-buttons').appendTo($('.information-block'));
+            }
+            //  Вопросы и ответы
         } else if ($('article').data('page') == 'question') {
             if ($(window).width() <= '700') {
                 $('.tofirst').prependTo($('.grid.grid-pad.question-page'));
