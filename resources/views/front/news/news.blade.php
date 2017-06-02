@@ -56,7 +56,7 @@
             <div class="stock-info">
                 <div class="stock-social">
                     <img src="/img/stock-social.png" alt="" class="stock-social-img">
-                    <p class="stock-social-descr">Получайте акции через WhatApp по номеру <span class="no-br">+7 777 178-29-26</span>
+                    <p class="stock-social-descr">Получайте акции через WhatsApp по номеру <span class="no-br">+7 777 178-29-26</span>
                         и в&nbsp;нашем <a target="_blank" href="//facebook.com/medstyle.kz" class="stock-social-link">Facebook</a></p>
                 </div>
             </div>

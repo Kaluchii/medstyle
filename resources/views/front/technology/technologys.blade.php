@@ -28,7 +28,7 @@
                                 <h3 class="technologies-item__title">Следите за обновлениями</h3>
                                 <p class="technologies-item__text">Мы регулярно обновляем наши аппаратные технологии и
                                     добавляем услуги. Следите за обновлениями в
-                                    <a target="_blank" href="//facebook.com/medstyle.kz" class="technologies-item__link pink-link">Facebook</a> и Ваццапе по номеру
+                                    <a target="_blank" href="//facebook.com/medstyle.kz" class="technologies-item__link pink-link">Facebook</a> и WhatsApp по номеру
                                     <span class="no-br">+7 777 178-29-26</span>.</p>
                             </li>
                         @endif
