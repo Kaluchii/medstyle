@@ -41,7 +41,7 @@
                                     <?php $link = wrap_in_link($item->prev_name_field, $item->slug_field); ?>
                                     {!! $link !!}
                                 </h2>
-                                <p class="shares-description">{{$item->prev_text_field}}</p>
+                                <div class="shares-description text-block">{!! $item->prev_text_field !!}</div>
                                 <p class="shares-date">{{$item->all_text_field}}</p>
                             </div>
                             <div class="col-3-12">
