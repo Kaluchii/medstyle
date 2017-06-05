@@ -114,7 +114,7 @@ class FrontController extends Controller {
 	public function getServices(QueryAgent $queryAgent ){
 		$st_spec = $queryAgent->getBlock('static_services',[],[]);
 
-		$dom_category = $queryAgent->getGroupFlat('dom_services','serv_category',[],[]);
+		$dom_category = $queryAgent->getGroupFlat('dom_services','serv_category',['serv_category' => ['sorter' => 'ASC']],[]);
 		$problems = $queryAgent->getGroupFlat('dom_problems','problems',[],[]);
 		$services = $queryAgent->getGroupFlat('dom_services','services',[],[]);
 
