@@ -13,7 +13,6 @@
     @include('front.header')
     @include('front.footer')
     @include('front.popups.question')
-    @include('front.popups.consult')
     @include('front.popups.thank')
 
     @yield('styles')
