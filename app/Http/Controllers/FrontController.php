@@ -114,7 +114,7 @@ class FrontController extends Controller {
 	public function getServices(QueryAgent $queryAgent ){
 		$st_spec = $queryAgent->getBlock('static_services',[],[]);
 
-		$dom_category = $queryAgent->getGroupFlat('dom_services','serv_category',[],[]);
+		$dom_category = $queryAgent->getGroupFlat('dom_services','serv_category',['serv_category' => ['sorter' => 'ASC']],[]);
 		$problems = $queryAgent->getGroupFlat('dom_problems','problems',[],[]);
 		$services = $queryAgent->getGroupFlat('dom_services','services',[],[]);
 
@@ -211,15 +211,11 @@ class FrontController extends Controller {
 	public function getTechnologys(QueryAgent $queryAgent){
 		$static = $queryAgent->getBlock('static_technology',[],[]);
 		$dom    = $queryAgent->getBlock('dom_technologys',['technologys'=>['sorter'=> 'ASC']],[]);
-		$special = $queryAgent->getBlock('dom_specials',['special_offers' => ['sorter'=> 'ASC']],[]);
 		$services = $queryAgent->getGroupFlat('dom_services','services',[],[]);
-		$tech     = $queryAgent->getGroupFlat('static_technology','techno_cert',[],[]);
 		return view('front/technology/technologys',[
 			'static'  			=> $static,
 			'dom'     			=> $dom,
-			'special'			=> $special,
 			'serv'              => $services,
-			'tech'              => $tech
 
 		]);
 	}

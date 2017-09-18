@@ -11,7 +11,7 @@
                        data-item-id="{{$item_serv_category->id_field}}"
                        placeholder="Строка">
             </div>
-            <div class="block">
+            {{--<div class="block">
                 <label>Картинка категории</label>
                 <div class="image-load">
                     <div class="img-hide-block">
@@ -62,7 +62,7 @@
                         </label>
                     </div>
                 </div>
-            </div>
+            </div>--}}
             <div class="block">
                 <label>Краткое описание на главной странице</label>
                 <textarea data-field-type="text" data-field-name="descr_on_main" data-block="dom_services" data-group="serv_category"

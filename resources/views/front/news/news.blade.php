@@ -41,7 +41,7 @@
                                     <?php $link = wrap_in_link($item->prev_name_field, $item->slug_field); ?>
                                     {!! $link !!}
                                 </h2>
-                                <p class="shares-description">{{$item->prev_text_field}}</p>
+                                <div class="shares-description text-block">{!! $item->prev_text_field !!}</div>
                                 <p class="shares-date">{{$item->all_text_field}}</p>
                             </div>
                             <div class="col-3-12">
@@ -56,8 +56,8 @@
             <div class="stock-info">
                 <div class="stock-social">
                     <img src="/img/stock-social.png" alt="" class="stock-social-img">
-                    <p class="stock-social-descr">Получайте акции через WhatApp по номеру <span class="no-br">+7 777 178-29-26</span>
-                        и в&nbsp;нашем <a href="//facebook.com" class="stock-social-link">Facebook</a></p>
+                    <p class="stock-social-descr">Получайте акции через WhatsApp по номеру <span class="no-br">+7 777 178-29-26</span>
+                        и в&nbsp;нашем <a target="_blank" href="//facebook.com/medstyle.kz" class="stock-social-link">Facebook</a></p>
                 </div>
             </div>
         </div>

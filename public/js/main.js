@@ -10,13 +10,19 @@ $(document).ready(function () {
     // Перестройка блоков контента на разных страницах на разных разрешениях
     function WindowSize() {
         //  Страница услуг
-        if ($('article').data('page') == 'services') {
-            if (($(window).width() <= '870') && ($(window).width() >= '600')) {
-                $('.category-1-1').appendTo($('.first'));
-                $('.category-1-2').appendTo($('.second'));
-            } else if ($(window).width() >= '870') {
-                $('.category-1-1').appendTo($('.editable'));
-                $('.category-1-2').appendTo($('.editable'));
+        if ($('.content-wrap').data('page') == 'services') {
+            if($(window).width() <= 740) {
+                var count = $('.vertical-list:last-child .movable').length;
+                var half = count / 2 | 0;
+                $('.vertical-list:last-child .movable').each(function(i){
+                    if(i<half){
+                        $(this).appendTo($('.vertical-list:nth-child(1)'));
+                    }else{
+                        $(this).appendTo($('.vertical-list:nth-child(2)'));
+                    }
+                });
+            }else{
+                $('.vertical-list .movable').prependTo($('.vertical-list:last-child'));
             }
         //  Страница "услуга"
         } else if ($('article').data('page') == 'service') {
@@ -28,17 +34,17 @@ $(document).ready(function () {
                 $('article.content .all-product:first-child').appendTo($('.information-block'));
                 $('article.content .social-buttons').appendTo($('.information-block'));
             }
+        //  Страница "технология"
+        } else if ($('article').data('page') == 'technology') {
 
-            /*if ($(window).width() <= '780') {
-                $('.interest').each(function(i){
-                    $(this).appendTo($('.col-1-2.int')).data('from',(i+1));
-                });
-            } else {
-                $('.interest').each(function(i){
-                    $(this).appendTo($('.fr-'+(i+1)));
-                });
-            }*/
-        //  Вопросы и ответы
+            if($(window).width() < 1000) {
+                $('.information-block .social-buttons').prependTo($('article.content[data-page=technology]'));
+                $('.information-block .all-product').prependTo($('article.content[data-page=technology]'));
+            }else{
+                $('article.content .all-product:first-child').appendTo($('.information-block'));
+                $('article.content .social-buttons').appendTo($('.information-block'));
+            }
+            //  Вопросы и ответы
         } else if ($('article').data('page') == 'question') {
             if ($(window).width() <= '700') {
                 $('.tofirst').prependTo($('.grid.grid-pad.question-page'));
@@ -99,6 +105,20 @@ $(document).ready(function () {
                 offsetY: 40,
                 blockElement: '.poleznoe-block-item'
             });
+        } else if ($('.content-wrap').data('page') == 'technologies') {
+            if($(window).width() <= 840) {
+                var count = $('.vertical-list:first-child .movable').length;
+                var half = count / 2 | 0;
+                $('.vertical-list:first-child .movable').each(function(i){
+                    if(i<half){
+                        $(this).prependTo($('.vertical-list:nth-child(2)'));
+                    }else{
+                        $(this).prependTo($('.vertical-list:nth-child(3)'));
+                    }
+                });
+            }else{
+                $('.vertical-list .movable').appendTo($('.vertical-list:first-child'));
+            }
         }
     }
 
@@ -155,6 +175,10 @@ $(document).ready(function () {
             });
         } else if ($('article').data('page') == 'stock') {
             $('.wrapper').addClass('gray-background');
+        } else if ($('.content-wrap').data('page') == 'technologies') {
+            $('.wrapper').addClass('gray-background2');
+        } else if ($('.content-wrap').data('page') == 'services') {
+            $('.wrapper').addClass('gray-background3');
         }
     });
     //========================== вызов меню на малых экранах

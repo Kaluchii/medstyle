@@ -61,7 +61,7 @@
             <div class="service-proc__services-category services-category">
                 @foreach($serv as $item_cat)
                     <div class="services-category__services-category-item services-category-item">
-                        <div class="services-category-item__wrap"><a href="/services#{{$item_cat->category_title_field}}" class="services-category-item__link-title">{{$item_cat->category_title_field}}</a>
+                        <div class="services-category-item__wrap"><a href="/services#{{$item_cat->category_title_field}}" class="services-category-item__link-title pink-link">{{$item_cat->category_title_field}}</a>
                             <p class="services-category-item__text">{!! $item_cat->descr_on_main_field !!}</p></div>
                     </div>
                 @endforeach

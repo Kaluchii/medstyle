@@ -119,13 +119,13 @@
             </div>
         </div>
         <div class="block">
-            <label>Описание акции на странице услуги</label>
+            <label>Описание акции на общей странице услуг</label>
             <input type="text" data-field-type="string" data-field-name="discount" data-block="dom_services"
                    data-group="services" class="input group_field" value="{{$item_services->discount_field}}"
                    data-item-id="{{$item_services->id_field}}" placeholder="Строка">
         </div>
         <div class="block">
-            <label>Описание акции на общей странице услуг</label>
+            <label>Описание акции на странице услуги</label>
             <input type="text" data-field-type="string" data-field-name="discount_comment" data-block="dom_services"
                    data-group="services" class="input group_field" value="{{$item_services->discount_comment_field}}"
                    data-item-id="{{$item_services->id_field}}" placeholder="Строка">
