@@ -90,6 +90,7 @@ return [
     ],
     'dom_videos'=>[
         'title'  => 'Видео',
+        'stringfields' => ['page_title','seo_description','seo_keywords'],
         'groups' =>[
             'videos' =>[
                 'images'        => ['wrap'],

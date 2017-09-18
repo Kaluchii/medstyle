@@ -136,7 +136,7 @@ return [
     ],
     'videos_wrap' =>[
         'sizes' => [
-            ['width'=>600, 'height'=>450, 'sufix'=>'primary', 'mod'=>false],
+            ['width'=>350, 'height'=>200, 'sufix'=>'primary', 'mod'=>false],
             ['width'=>240, 'height'=>null, 'sufix'=>'secondary'],
             ['width'=>90, 'height'=>null, 'sufix'=>'preview'],
             ['width'=>90, 'height'=>null, 'sufix'=>'prefix'],

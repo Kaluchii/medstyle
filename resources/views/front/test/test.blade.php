@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.index.menu')
+@include('front.menu')
 @section('content')
     <?php $title = 'Тестирование | MEDSTYLE Алматы' ?>
     @include('front.test.meta')

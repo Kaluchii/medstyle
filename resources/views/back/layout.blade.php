@@ -11,7 +11,7 @@
 </head>
 <body>
 <header class="header">
-    <a href="/" class="site-name">Клиника эстетической медицины MEDSTYLE</a>
+    <p class="site-name">Клиника эстетической медицины MEDSTYLE</p>
     <div class="button">
         <a href="/auth/logout" class="logout">Выход</a>
     </div>

@@ -5,7 +5,7 @@
 
 
         <div class="block">
-            <label>Превью специального предложения</label>
+            <label>Превью специального предложения для главной</label>
             <div class="image-load">
                 <div class="img-hide-block">
                     <input type="hidden" class="prefix" data-field-name="wrap" data-group="special_offers"
