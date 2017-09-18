@@ -5,6 +5,7 @@
     <title> <?php echo $title ?> </title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+	<meta name="cmsmagazine" content="8595dcaa5a4b96a7f4b87b77b13368cb" />
     <link rel="shortcut icon" href="/images/1374164082_med_0.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('meta')

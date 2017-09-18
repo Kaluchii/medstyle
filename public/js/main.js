@@ -4,8 +4,16 @@
 
 $(document).ready(function () {
 
-
-
+    var items = document.location.pathname;
+    var category = items.split('/')[1];
+    $('.menu-item .item').each(function () {
+        var ahref = $(this).attr('href').split('/')[1];
+        category = category == 'service' ? 'services' : category;
+        category = category == 'specialist' ? 'specialists' : category;
+        if (ahref == category) {
+            $(this).addClass('active').closest('.menu-item').addClass('active');
+        }
+    });
     //=========================== Магия адаптивной верстки
     // Перестройка блоков контента на разных страницах на разных разрешениях
     function WindowSize() {
@@ -327,8 +335,12 @@ $(document).ready(function () {
     $('.bookmark.add').on('click',function(){
         add_favorite(this);
     });
-    }
-    );
+
+    $('.video-block__item').on('click', function (e) {
+        e.preventDefault();
+        $(this).find('.video_player').trigger('click');
+    });
+});
 
 
 
@@ -343,6 +355,65 @@ $(window).on('load resize', function () {
             $('.col_1-3:nth-child(1) .removable').removeClass('removable').appendTo($('.col_1-3:nth-child(3)'));
             $('.col_1-3:nth-child(2) .removable').removeClass('removable').appendTo($('.col_1-3:nth-child(3)'));
             $('.col_1-3:nth-child(3)').removeClass('hide-block');
+        }
+    }
+});
+function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+function giveIFrameSrc(url) {
+    var pos;
+    var resultSrc;
+    if (~url.indexOf("vimeo.com/")){
+        pos = url.indexOf("vimeo.com/") + 10;
+        resultSrc = 'https://player.vimeo.com/video/' + url.substr(pos) + '?autoplay=1&color=ff0179&title=0&byline=0&portrait=0';
+        return resultSrc;
+    }
+    if (~url.indexOf("watch?v=")){
+        pos = url.indexOf("watch?v=") + 8;
+        resultSrc = 'https://www.youtube.com/embed/' + url.substr(pos) + '?autoplay=1&autohide=1&rel=0&amp;showinfo=0?autoplay=1&autohide=1';
+        return resultSrc;
+    }
+}
+r(function(){
+    if (!document.getElementsByClassName) {
+        // Поддержка IE8
+        var getElementsByClassName = function(node, classname) {
+            var a = [];
+            var re = new RegExp('(^| )'+classname+'( |$)');
+            var els = node.getElementsByTagName("*");
+            for(var i=0,j=els.length; i<j; i++)
+                if(re.test(els[i].className))a.push(els[i]);
+            return a;
+        }
+        var videos = getElementsByClassName(document.body,"video_player");
+    } else {
+        var videos = document.getElementsByClassName("video_player");
+    }
+
+    var nb_videos = videos.length;
+    for (var i=0; i<nb_videos; i++) {
+        videos[i].style.backgroundImage = 'url(/images/' + videos[i].getAttribute("data-preview");
+
+        // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+        var play = document.createElement("div");
+        play.setAttribute("class","play");
+        videos[i].appendChild(play);
+
+        videos[i].onclick = function() {
+            // создаем iframe со включенной опцией autoplay
+            var iframe = document.createElement("iframe");
+            var iframe_src = giveIFrameSrc(this.getAttribute("data-link"));
+            iframe.setAttribute("src",iframe_src);
+            iframe.setAttribute("frameborder",'0');
+            iframe.setAttribute("webkitallowfullscreen",'');
+            iframe.setAttribute("mozallowfullscreen",'');
+            iframe.setAttribute("allowfullscreen",'');
+
+            // Высота и ширина iframe должны быть такими же, как и у родительского блока
+            iframe.style.width  = '100%';
+            iframe.style.height = '100%';
+
+            // Заменяем миниатюру плеером с YouTube
+            this.parentNode.replaceChild(iframe, this);
         }
     }
 });

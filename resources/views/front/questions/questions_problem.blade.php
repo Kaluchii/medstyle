@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.questions.menu')
+@include('front.menu')
 @section('content')
 @include('front.test.meta')
     <?php $title = $quest->page_title_field ?>

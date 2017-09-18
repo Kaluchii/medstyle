@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.index.menu')
+@include('front.menu')
 @section('content')
     @include('front.meta', ['meta_description' => $static_index_page->seo_description_field, 'meta_keywords' => $static_index_page->seo_keywords_field])
     <?php //$title = $static_index_page->page_title_field or 'MEDSTYLE Алматы | Клиника эстетической медецины'
@@ -79,27 +79,27 @@
             </div>
         </div>
         <div class="video-wrap">
-            <h3 class="block-name">{{$video->title_field}}</h3>
-            <div class="grid grid-pad video">
-                <?php $count_video = 0;?>
-                @foreach($video->videos_group as $item)
-                    <?php $count_video++?>
-                    @if($count_video <= 3)
-                        <div class="col-1-3">
-                            <a target="_blank" href="{{$item->link_field}}" class="video-wrapper">
-                                <div class="video-hover">
-                                    <img src="/images/{{$item->wrap_image->primary_link}}" alt="#"
-                                         class="video-preview">
-                                    <div class="play-video-button-wrap"><span class="play-video"></span></div>
-                                    <div class="hover"></div>
+            <div class="video-block video-block--main-page">
+                <h1 class="video-block__title">{{$video->title_field}}</h1>
+                <ul class="video-block__list video-block__list--main-page">
+                    <?php $count_video = 0;?>
+                    @foreach($video->videos_group as $item)
+                        <?php $count_video++?>
+                        @if($count_video <= 3)
+                            <li class="video-block__item video-block__item--main-page">
+                                <div class="video-block__video-wrap">
+                                    <div class="video-block__video video_player"
+                                         data-link="{{$item->link_field}}"
+                                         data-preview="{{$item->wrap_image->primary_link}}">
+                                    </div>
                                 </div>
-                                <div class="text-a-wrap">
-                                    <p class="video-text">{{$item->name_field}}</p>
+                                <div class="video-block__name-wrap">
+                                    <p class="video-block__video-name">{{$item->name_field}}</p>
                                 </div>
-                            </a>
-                        </div>
-                    @endif
-                @endforeach
+                            </li>
+                        @endif
+                    @endforeach
+                </ul>
             </div>
         </div>
         <div class="block-shadow"><img src="/img/block_shadow.png" alt="Тень"></div>

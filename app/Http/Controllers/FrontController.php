@@ -23,6 +23,14 @@ class FrontController extends Controller {
 			'serv'              => $services
 		]);
 	}
+    public function getVideos(QueryAgent $queryAgent ){
+        $all_site = $queryAgent->getBlock('static_index_page', [], []);
+        $video	  = $queryAgent->getBlock('dom_videos', ['videos' => ['sorter' => 'DESC']], []);
+        return view('front/video/video',[
+            'static_index_page' => $all_site,
+            'video'           => $video,
+        ]);
+    }
 	public function getTitle(QueryAgent $queryAgent ){
 		$all_site = $queryAgent->getBlock('static_index_page', [], []);
 		$video	  = $queryAgent->getBlock('dom_videos', ['videos' => ['sorter' => 'DESC']], []);

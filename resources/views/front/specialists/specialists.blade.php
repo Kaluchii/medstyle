@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.specialists.menu')
+@include('front.menu')
 @section('content')
 @include('front.meta', ['meta_description' => $static_spec->seo_description_field, 'meta_keywords' => $static_spec->seo_keywords_field])
     <?php $title = $static_spec->page_title_field ?>

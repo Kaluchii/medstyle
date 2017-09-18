@@ -1,11 +1,11 @@
 @extends('front.layout')
-@include('front.poleznoe.menu')
+@include('front.menu')
 @section('content')
 @include('front.meta', ['meta_description' => $static->seo_description_field, 'meta_keywords' => $static->seo_keywords_field])
     <?php $title = $static->page_title_field ?>
     <article class="content" data-page="helpful">
         <div class="content-head">
-            <h1 class="content-head-title spec">{{$static->title_field}}</h1>
+            <h1 class="poleznoe-title">{{$static->title_field}}</h1>
         </div>
         <div class="margin-left-wrap">
         <div class="grid grid-pad helpful">

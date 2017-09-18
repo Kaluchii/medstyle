@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.poleznoe.menu')
+@include('front.menu')
 @include('front.meta', ['meta_description' => $polez->seo_description_field, 'meta_keywords' => $polez->seo_keywords_field])
     <?php $title = $polez->page_title_field ?>
 
