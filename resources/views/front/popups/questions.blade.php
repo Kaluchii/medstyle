@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.questions.menu')
+@include('front.menu')
 @section('content')
     <?php $title = $quest->page_title_field ?>
     <article class="content" data-page="questions">

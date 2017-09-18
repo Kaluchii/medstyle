@@ -53,7 +53,7 @@ class AdminController extends Controller {
 	}
 	public function getService(QueryAgent $queryAgent){
 		$spec = $queryAgent->getBlock('static_services',[],[]);
-		$dom  = $queryAgent->getBlock('dom_services',[],[]);
+		$dom  = $queryAgent->getBlock('dom_services',['serv_category' => ['sorter' => 'ASC']],[]);
 		$all_image = $queryAgent->getBlock('dom_all_images', [], []);
 		return view('back/blocks/static_services',[
 			'static_services' => $spec,

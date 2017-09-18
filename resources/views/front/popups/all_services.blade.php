@@ -31,10 +31,12 @@
                                                                             <h3 class="category-name">{{$item_category->category_title_field}}</h3>
                                                                             <ul class="category-list">
                                                                                 @foreach($item_category->services_group as $serv_item)
-                                                                                    @if($serv_item->discount_field != '')
-                                                                                        <li class="category-name"><a href="/service/{{$serv_item->slug_field}}" class="link bold">{{$serv_item->name_field}}</a> <span class="discount">{{$serv_item->discount_field}}</span></li>
-                                                                                    @else
-                                                                                        <li class="category-name"><a href="/service/{{$serv_item->slug_field}}" class="link">{{$serv_item->name_field}}</a></li>
+                                                                                    @if(!($serv_item->slug_field == 'dysport' && $service->slug_field == 'lpg-cellu-endermolab-franciya'))
+                                                                                        @if($serv_item->discount_field != '')
+                                                                                            <li class="category-name"><a href="/service/{{$serv_item->slug_field}}" class="link bold">{{$serv_item->name_field}}</a> <span class="discount">{{$serv_item->discount_field}}</span></li>
+                                                                                        @else
+                                                                                            <li class="category-name"><a href="/service/{{$serv_item->slug_field}}" class="link">{{$serv_item->name_field}}</a></li>
+                                                                                        @endif
                                                                                     @endif
 
                                                                                 @endforeach

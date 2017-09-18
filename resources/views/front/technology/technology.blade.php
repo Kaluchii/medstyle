@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.technology.menu')
+@include('front.menu')
 @section('content')
 @include('front.meta', ['meta_description' => $tech->seo_description_field, 'meta_keywords' => $tech->seo_keywords_field])
     <?php $title = $tech->page_title_field ?>

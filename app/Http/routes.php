@@ -78,6 +78,7 @@ Route::get('/news/{slug}', 'FrontController@getNew');
 Route::get('/questions', 'FrontController@getQuestions');
 Route::get('/questions/{slug}', 'FrontController@getQuestions_pr');
 
+Route::get('/video', 'FrontController@getVideos');
 
 Route::get('/contacts', 'FrontController@getContacts');
 
@@ -126,6 +127,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 	Route::get('/edit/special', 'AdminController@getSpecial');
 	Route::get('/edit/special/{id}', 'AdminController@editSpecial');
 
+    Route::get('/edit/videos', 'AdminController@getVideos');
 
 	/*
 	 * testing routes

@@ -23,6 +23,14 @@ class FrontController extends Controller {
 			'serv'              => $services
 		]);
 	}
+    public function getVideos(QueryAgent $queryAgent ){
+        $all_site = $queryAgent->getBlock('static_index_page', [], []);
+        $video	  = $queryAgent->getBlock('dom_videos', ['videos' => ['sorter' => 'DESC']], []);
+        return view('front/video/video',[
+            'static_index_page' => $all_site,
+            'video'           => $video,
+        ]);
+    }
 	public function getTitle(QueryAgent $queryAgent ){
 		$all_site = $queryAgent->getBlock('static_index_page', [], []);
 		$video	  = $queryAgent->getBlock('dom_videos', ['videos' => ['sorter' => 'DESC']], []);
@@ -114,7 +122,7 @@ class FrontController extends Controller {
 	public function getServices(QueryAgent $queryAgent ){
 		$st_spec = $queryAgent->getBlock('static_services',[],[]);
 
-		$dom_category = $queryAgent->getGroupFlat('dom_services','serv_category',[],[]);
+		$dom_category = $queryAgent->getGroupFlat('dom_services','serv_category',['serv_category' => ['sorter' => 'ASC']],[]);
 		$problems = $queryAgent->getGroupFlat('dom_problems','problems',[],[]);
 		$services = $queryAgent->getGroupFlat('dom_services','services',[],[]);
 

@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.services.menu')
+@include('front.menu')
 @section('content')
 @include('front.meta', ['meta_description' => $service->seo_description_field, 'meta_keywords' => $service->seo_keywords_field])
     <?php $title = $service->page_title_field ?>

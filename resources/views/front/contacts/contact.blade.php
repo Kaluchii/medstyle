@@ -1,5 +1,5 @@
 @extends('front.layout')
-@include('front.contacts.menu')
+@include('front.menu')
 @section('content')
 @include('front.meta', ['meta_description' => $contact->seo_description_field, 'meta_keywords' => $contact->seo_keywords_field])
     <?php $title = $contact->page_title_field ?>
@@ -34,4 +34,5 @@
         </div>
     </div>
 </article>
+@include('front.popups.consult')
 @endsection
