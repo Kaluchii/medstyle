@@ -1,8 +1,8 @@
 @section('scripts')
     <script  defer src="/js/jquery-1.8.3.js"></script>
-    <script  defer src="/js/jquery.bxslider.js"></script>
-    <script  defer src="/js/jquery.magnific-popup.js"></script>
     <script  defer src="/js/jquery-ui.min.js"></script>
+    <script  defer src="/js/jquery.flipster.js"></script>
+    <script  defer src="/js/jquery.magnific-popup.js"></script>
     <script  defer src="/js/blocksit.min.js"></script>
     <script  defer src="/js/main.js"></script>
     <script  defer src="/js/testing.js"></script>

@@ -4,6 +4,22 @@
 
 $(document).ready(function () {
 
+    var myFlipster = $('.my-flipster').flipster({
+        style: 'carousel',
+        start: 0,
+        loop: true,
+        autoplay: true,
+        scrollwheel: false,
+        spacing: -0.75,
+        nav: true,
+        buttons: true
+    });
+    myFlipster.flipster('play', 5000);
+
+    $('.flipster__button').on('click', function () {
+        myFlipster.flipster('stop');
+    });
+
     var items = document.location.pathname;
     var category = items.split('/')[1];
     $('.menu-item .item').each(function () {
@@ -137,15 +153,6 @@ $(document).ready(function () {
     var menuTop = 0;
     $(window).on('load', function () {
         if ($('article').data('page') == 'index') {
-            $('.slider').bxSlider({
-                nextText: '<div class="right-slide"></div>',
-                prevText: '<div class="left-slide"></div>',
-                preventDefaultSwipeY: false,
-                auto: true,
-                speed: 1500,
-                pause: 5000
-            });
-
             $('.wrapper').addClass('gray-background');
         }
         menuTop = $('.header').outerHeight()+1;
@@ -173,15 +180,7 @@ $(document).ready(function () {
     });
 
     $(window).on('load', function () {
-        if ($('article').data('page') == 'service') {
-            $('.service_slider').bxSlider({
-                nextText: '<div class="right-slide"></div>',
-                prevText: '<div class="left-slide"></div>',
-                auto: true,
-                speed: 1500,
-                pause: 4500
-            });
-        } else if ($('article').data('page') == 'stock') {
+        if ($('article').data('page') == 'stock') {
             $('.wrapper').addClass('gray-background');
         } else if ($('.content-wrap').data('page') == 'technologies') {
             $('.wrapper').addClass('gray-background2');

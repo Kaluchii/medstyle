@@ -5,55 +5,17 @@
     <?php //$title = $static_index_page->page_title_field or 'MEDSTYLE Алматы | Клиника эстетической медецины'
     $title = $static_index_page->page_title_field; ?>
     <div class="head-slider">
-        <ul class="slider">
-            @foreach($static_index_page->slider_group as $item)
-                @if($item->flag_field == 1)
-                    <li class="slide-item left-flag">
-                        <a href="{{$item->link_field}}">
-                            <div class="slide-text-wrap">
-                                <p class="slide-title">{!! $item->slide_title_field !!}</p>
-                                <p class="slide-text">{!! $item->descr_field !!}</p>
-                            </div>
-                            <img src="/images/{{$item->wrap_image->primary_link}}" alt="#" class="slide mobile">
-                            <img src="/images/{{$item->desc_wrap_image->primary_link}}" alt="#" class="slide desktop">
-                        </a>
-                    </li>
-                @elseif($item->flag_field == 2)
-                    <li class="slide-item right-flag">
-                        <a href="{{$item->link_field}}">
-                            <div class="slide-text-wrap">
-                                <p class="slide-title">{!! $item->slide_title_field !!}</p>
-                                <p class="slide-text">{!! $item->descr_field !!}</p>
-                            </div>
-                            <img src="/images/{{$item->wrap_image->primary_link}}" alt="#" class="slide mobile">
-                            <img src="/images/{{$item->desc_wrap_image->primary_link}}" alt="#" class="slide desktop">
-                        </a>
-                    </li>
-                @elseif($item->flag_field == 3)
-                    <li class="slide-item center-flag">
-                        <a href="{{$item->link_field}}">
-                            <div class="slide-text-wrap">
-                                <p class="slide-title">{!! $item->slide_title_field !!}</p>
-                                <p class="slide-text">{!! $item->descr_field !!}</p>
-                            </div>
-                            <img src="/images/{{$item->wrap_image->primary_link}}" alt="#" class="slide mobile">
-                            <img src="/images/{{$item->desc_wrap_image->primary_link}}" alt="#" class="slide desktop">
-                        </a>
-                    </li>
-                @else
-                    <li class="slide-item left-flag">
-                        <a href="{{$item->link_field}}">
-                            <div class="slide-text-wrap">
-                                <p class="slide-title">{!! $item->slide_title_field !!}</p>
-                                <p class="slide-text">{!! $item->descr_field !!}</p>
-                            </div>
-                            <img src="/images/{{$item->wrap_image->primary_link}}" alt="#" class="slide mobile">
-                            <img src="/images/{{$item->desc_wrap_image->primary_link}}" alt="#" class="slide desktop">
-                        </a>
-                    </li>
-                @endif
-            @endforeach
-        </ul>
+        <div class="my-flipster">
+            <ul class="flip-items">
+                @foreach($static_index_page->slider_group as $item)
+                <li class="slide-item" data-flip-title=" ">
+                    <a href="{{$item->link_field}}">
+                        <img src="/images/{{$item->desc_wrap_image->primary_link}}" alt="#" class="slide desktop">
+                    </a>
+                </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
     <article class="content test-1 test-2" data-page="index">
         <div class="service-proc">

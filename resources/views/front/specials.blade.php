@@ -20,7 +20,7 @@
             return $str;
         }
         ?>
-        <div class="rows">
+        <div class="rows rows--service">
             @foreach($special->special_offers_group as $item)
                 <?php $i++; ?>
                 @if($i <= 3)

@@ -1,0 +1,48 @@
+/* @group Flipster Navigation */
+
+.flipster__nav,
+.flipster__nav__item {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.flipster__nav {
+	display: flex;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 10px;
+	z-index: 20;
+}
+
+.flipster__nav__item  {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.flipster__nav__link {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: -webkit-gradient(linear, 0 0, 90% 0, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.25)));
+	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) 90%);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.25)), color-stop(90%, rgba(0, 0, 0, 0.25)));
+	background: linear-gradient(left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) 90%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 0, 0, 0.25)', endColorstr='rgba(0, 0, 0, 0.25)', GradientType=0);
+	background-position: 0 50%;
+	background-size: 50px 4px;
+	background-repeat: no-repeat;
+
+    .flipster__nav__item--current > &{
+		background: -webkit-gradient(linear, 0 0, 90% 0, from(#ffffff), to(#ffffff));
+		background: -webkit-linear-gradient(left, #ffffff, #ffffff 90%);
+		background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(90%, #ffffff));
+		background: linear-gradient(left, #ffffff, #ffffff 90%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+		background-position: 0 50%;
+		background-size: 50px 4px;
+		background-repeat: no-repeat;
+    }
+}
+	/* @end */
