@@ -358,7 +358,8 @@
   }
 
   .grid.grid-pad.specialist .col-1-2:first-child {
-    width: 45%
+    width: 45%;
+    min-width: 300px;
   }
 
   .grid.grid-pad.specialist .col-1-2:last-child {
@@ -412,6 +413,10 @@
   h1.testing-title {
     font-size: 24px
   }
+
+  .text-block h2 {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -445,8 +450,8 @@
     float: left
   }
 
-  .grid.grid-pad.specialists {
-    padding-left: 40px
+  .grid.grid-pad.specialists, .grid.grid-pad.head-grid {
+    padding-left: 30px
   }
 
   .problems-wrapper {
@@ -716,10 +721,6 @@
     width: 20%
   }
 
-  .grid.grid-pad.specialist .col-1-2:first-child {
-    width: 100%
-  }
-
   .photo {
     text-align: center
   }
@@ -729,7 +730,6 @@
     border: 1px solid #ccc;
     background: #fff;
     position: relative;
-    left: -10px;
     width: 100%
   }
 
@@ -749,7 +749,12 @@
   }
 
   .grid.grid-pad.about .col-1-2:first-child, img.special-preview {
-    width: 100%
+    width: 100%;
+    padding-right: 20px;
+  }
+
+  .grid.grid-pad.about{
+    padding-left: 20px;
   }
 }
 @media screen and (min-width: 1055px) {
@@ -1452,6 +1457,11 @@
 
   .stock-social-descr {
     margin: 20px 0 0
+  }
+
+  .attention-block p.text {
+    font-size: 16px;
+    line-height: 1.6;
   }
 }
 

@@ -82,9 +82,11 @@ p.right-text {
   color: #c69
 }
 
-li.menu-item a.item, nav.main-menu {
+li.menu-item a.item, .main-menu {
   background: #915a78;
-  width: 100%
+  width: 100%;
+  position: relative;
+  z-index: 1000;
 }
 
 .header-wrap {
@@ -519,7 +521,7 @@ li.category-name {
   box-shadow: 0 5px 10px #b4c0c6
 }
 
-.specialists a.specialist:hover .spec-name .name, .worry-item a.link:hover {
+.worry-item a.link:hover {
   background: -webkit-gradient(linear, left top, right top, from(#e4bbc9), to(#e4bbc9));
   background: -webkit-linear-gradient(left, #e4bbc9, #e4bbc9 100%)
 }
@@ -557,7 +559,7 @@ a.popup-changer.category {
   font-size: 16px
 }
 
-.all-product.category, .answer, .specialist {
+.all-product.category, .answer {
   padding-left: 20px;
   display: inline-block
 }
@@ -652,7 +654,8 @@ img.photo {
 .ask-me {
   background: #e7e8e9;
   padding-top: 15px;
-  padding-left: 20px
+  padding-left: 20px;
+  min-width: 260px;
 }
 
 .input {
@@ -718,7 +721,7 @@ a.send-ask {
   border: 1px solid #915a78
 }
 
-h2.spec-name, h3.sert, li.problem-item, p.spec-name {
+h3.sert, li.problem-item, p.spec-name {
   font-family: RobotoCondensedRegular
 }
 
@@ -876,12 +879,11 @@ img.spec {
 }
 
 .grid.grid-pad.specialists {
-  padding-left: 70px
+  padding-left: 90px
 }
 
 p.spec-name {
   font-size: 24px;
-  color: #963264;
   margin-top: 15px;
   max-width: 200px
 }
@@ -898,16 +900,32 @@ p.spec-prof {
 }
 
 .specialists a.specialist:hover .specialist-photo .spec {
-  border: 2px solid #c69;
+  border: 2px solid #ae2755;
   padding: 4px
 }
 
-.specialists a.specialist:hover .spec-name .name {
-  background: linear-gradient(left, #e4bbc9, #e4bbc9 100%);
-  background-position: 0 97%;
-  background-size: 30px 1px;
+.specialists .specialist .spec-name .name {
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#f0b2d1), to(#f0b2d1));
+  background: -webkit-linear-gradient(left, #f0b2d1, #f0b2d1 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#f0b2d1), to(#f0b2d1));
+  background: linear-gradient(left, #f0b2d1, #f0b2d1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0b2d1', endColorstr='#f0b2d1', GradientType=0);
+  background-position: 0 95%;
+  background-size: 10px 1px;
   background-repeat: repeat-x;
-  color: #c69
+  color: #c36;
+}
+
+.specialists .specialist:hover .spec-name .name {
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#b56679), to(#b56679));
+  background: -webkit-linear-gradient(left, #b56679, #b56679 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#b56679), to(#b56679));
+  background: linear-gradient(left, #b56679, #b56679 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b56679', endColorstr='#b56679', GradientType=0);
+  background-position: 0 95%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #903
 }
 
 .from-life:hover p.text-from span, a.link:hover {
@@ -1007,12 +1025,6 @@ h3.sert {
 
 img.block-img {
   max-width: 100%
-}
-
-h2.spec-name {
-  font-weight: 400;
-  color: #333;
-  font-size: 32px
 }
 
 a.spec-link {
@@ -1384,22 +1396,13 @@ a.special:hover .special-text, a.special:hover .special-title {
   text-align: center;
   width: 100%;
   max-width: 100%;
-  padding-left: 0;
   font-size: 18px;
-  padding-bottom: 30px
+  padding: 15px;
 }
 
 img.building-photo {
   padding: 5px;
   max-width: 100%
-}
-
-.grid.grid-pad.contacts {
-  padding-left: 20px
-}
-
-.grid.grid-pad.contacts .col-1-2:first-child {
-  padding-left: 30px
 }
 
 .small-title {
@@ -3246,7 +3249,6 @@ img.head-img.mobile {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000
 }
 
 img.head-img.over {
