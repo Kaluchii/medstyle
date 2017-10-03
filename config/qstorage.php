@@ -94,7 +94,7 @@ return [
         'groups' =>[
             'videos' =>[
                 'images'        => ['wrap'],
-                'stringfields'  => ['link','name']
+                'stringfields'  => ['link','service_link','name']
             ]
         ]
     ],

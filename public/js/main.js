@@ -335,7 +335,7 @@ $(document).ready(function () {
         add_favorite(this);
     });
 
-    $('.video-block__item').on('click', function (e) {
+    $('.video-block__video-wrap').on('click', function (e) {
         e.preventDefault();
         $(this).find('.video_player').trigger('click');
     });

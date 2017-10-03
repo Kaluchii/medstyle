@@ -37,13 +37,17 @@
             >
         </label>
     </div>
-    <label>Ссылка</label>
+    <label>Ссылка на видео</label>
     <input type="text" data-field-type="string" data-field-name="link" data-block="dom_videos" data-group="videos"
            class="input group_field" value="{{$item_videos->link_field}}" data-item-id="{{$item_videos->id_field}}"
            placeholder="Строка">
-    <label>Название</label>
+    <label>Подпись под видео</label>
     <input type="text" data-field-type="string" data-field-name="name" data-block="dom_videos" data-group="videos"
            class="input group_field" value="{{$item_videos->name_field}}" data-item-id="{{$item_videos->id_field}}"
+           placeholder="Строка">
+    <label>Ссылка на услугу</label>
+    <input type="text" data-field-type="string" data-field-name="service_link" data-block="dom_videos" data-group="videos"
+           class="input group_field" value="{{$item_videos->service_link_field}}" data-item-id="{{$item_videos->id_field}}"
            placeholder="Строка">
     <div class="buttons_block">
         <button type="button" class="any_save" data-block="dom_videos" data-group="videos" data-entity="groupitem"

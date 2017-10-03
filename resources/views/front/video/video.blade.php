@@ -19,7 +19,7 @@
                             </div>
                         </div>
                         <div class="video-block__name-wrap">
-                            <p class="video-block__video-name">{{$item->name_field}}</p>
+                            <a href="{{$item->service_link_field}}" target="_blank" class="video-block__video-name pink-link">{{$item->name_field}}</a>
                         </div>
                     </li>
                 @endforeach
