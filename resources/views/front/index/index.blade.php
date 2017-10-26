@@ -5,16 +5,14 @@
     <?php //$title = $static_index_page->page_title_field or 'MEDSTYLE Алматы | Клиника эстетической медецины'
     $title = $static_index_page->page_title_field; ?>
     <div class="head-slider">
-        <div class="my-flipster">
-            <ul class="flip-items">
-                @foreach($static_index_page->slider_group as $item)
-                <li class="slide-item" data-flip-title=" ">
-                    <a href="{{$item->link_field}}">
-                        <img src="/images/{{$item->desc_wrap_image->primary_link}}" alt="#" class="slide desktop">
-                    </a>
-                </li>
-                @endforeach
-            </ul>
+        <div class="fotorama" data-auto="true" data-autoplay="7000" data-ratio="1400/700"
+             data-allowfullscreen="false"
+             data-loop="true"
+             data-transition="slide">
+            @foreach($static_index_page->slider_group as $item)
+                <div class="fotorama__link-wrap" data-img="/images/{{$item->desc_wrap_image->primary_link}}?{{$item->desc_wrap_image->cache_index}}"><a
+                            href="{{$item->link_field}}" class="fotorama__page-link"></a></div>
+            @endforeach
         </div>
     </div>
     <article class="content test-1 test-2" data-page="index">

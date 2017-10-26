@@ -1,49 +1,41 @@
-@media screen and (max-width: 1000px) {
-  .flipster__nav__link {
-    width: 30px;
-    height: 30px;
-    background: -webkit-gradient(linear, 0 0, 90% 0, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.25)));
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) 90%);
-    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.25)), color-stop(90%, rgba(0, 0, 0, 0.25)));
-    background: linear-gradient(left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 0, 0, 0.25)', endColorstr='rgba(0, 0, 0, 0.25)', GradientType=0);
-    background-position: 0 50%;
-    background-size: 30px 4px;
-    background-repeat: no-repeat;
-
-    .flipster__nav__item--current > &{
-      background: -webkit-gradient(linear, 0 0, 90% 0, from(#ffffff), to(#ffffff));
-      background: -webkit-linear-gradient(left, #ffffff, #ffffff 90%);
-      background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(90%, #ffffff));
-      background: linear-gradient(left, #ffffff, #ffffff 90%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
-      background-position: 0 50%;
-      background-size: 30px 4px;
-      background-repeat: no-repeat;
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .flipster{
-    padding-bottom: 30px;
-    overflow-y: hidden;
-
-    &__nav {
-      bottom: -12px;
-    }
-
-    &__button{
-      transform: translateY(~'calc(-50% - 15px)');
+  .fotorama{
+    .fotorama{
+      &__arr{
+        width: 60px;
+        opacity: .4 !important;
+        background: url("/img/hv.png") no-repeat center;
+        background-size: 20px 40px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 520px) {
-  .flipster{
-    &__button{
-      svg{
-        width: 1.2em;
+  .fotorama{
+    .fotorama{
+      &__arr{
+        &--prev{
+          background-position: 30px center;
+        }
+
+        &--next{
+          background-position: 30px center;
+        }
+      }
+
+      &__nav__frame--dot{
+        width: 40px !important;
+
+        &.fotorama__active{
+          .fotorama__dot{
+            width: 40px;
+          }
+        }
+      }
+
+      &__dot{
+        width: 40px;
       }
     }
   }
