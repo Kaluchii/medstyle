@@ -3,23 +3,6 @@
  */
 
 $(document).ready(function () {
-
-    var myFlipster = $('.my-flipster').flipster({
-        style: 'carousel',
-        start: 0,
-        loop: true,
-        autoplay: true,
-        scrollwheel: false,
-        spacing: -0.75,
-        nav: true,
-        buttons: true
-    });
-    myFlipster.flipster('play', 5000);
-
-    $('.flipster__button').on('click', function () {
-        myFlipster.flipster('stop');
-    });
-
     var items = document.location.pathname;
     var category = items.split('/')[1];
     $('.menu-item .item').each(function () {

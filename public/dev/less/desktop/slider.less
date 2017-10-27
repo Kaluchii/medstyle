@@ -5,6 +5,16 @@
 
 .fotorama{
   .fotorama{
+    &__wrap--css3:hover{
+      .fotorama__arr--prev{
+        transform: translate3d(0, 0, 0) rotateY(180deg) !important;
+      }
+
+      .fotorama__arr--next{
+        transform: translate3d(0, 0, 0) !important;
+      }
+    }
+
     &__arr{
       width: 100px;
       height: 100%;
@@ -12,17 +22,18 @@
       margin-top: 0;
       background: url("/img/hv.png") no-repeat center;
       opacity: .6 !important;
+      transition: .5s !important;
 
       &:hover{
         opacity: 1 !important;
       }
 
       &--prev{
-        transform: rotateY(180deg) !important;
+        transform: translate3d(-70px, 0, 0) rotateY(180deg) !important;
       }
 
       &--next{
-        transform: none !important;
+        transform: translate3d(70px, 0, 0) !important;
       }
     }
 
@@ -36,7 +47,7 @@
       pointer-events: auto;
       width: 50px !important;
       height: 50px !important;;
-      padding: 0 3px;
+      padding: 0 5px;
 
       &.fotorama__active{
         .fotorama__dot{
