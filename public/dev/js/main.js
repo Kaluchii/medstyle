@@ -3,20 +3,33 @@
  */
 
 $(document).ready(function () {
-
-
-
+    var items = document.location.pathname;
+    var category = items.split('/')[1];
+    $('.menu-item .item').each(function () {
+        var ahref = $(this).attr('href').split('/')[1];
+        category = category == 'service' ? 'services' : category;
+        category = category == 'specialist' ? 'specialists' : category;
+        if (ahref == category) {
+            $(this).addClass('active').closest('.menu-item').addClass('active');
+        }
+    });
     //=========================== Магия адаптивной верстки
     // Перестройка блоков контента на разных страницах на разных разрешениях
     function WindowSize() {
         //  Страница услуг
-        if ($('article').data('page') == 'services') {
-            if (($(window).width() <= '870') && ($(window).width() >= '600')) {
-                $('.category-1-1').appendTo($('.first'));
-                $('.category-1-2').appendTo($('.second'));
-            } else if ($(window).width() >= '870') {
-                $('.category-1-1').appendTo($('.editable'));
-                $('.category-1-2').appendTo($('.editable'));
+        if ($('.content-wrap').data('page') == 'services') {
+            if($(window).width() <= 740) {
+                var count = $('.vertical-list:last-child .movable').length;
+                var half = count / 2 | 0;
+                $('.vertical-list:last-child .movable').each(function(i){
+                    if(i<half){
+                        $(this).appendTo($('.vertical-list:nth-child(1)'));
+                    }else{
+                        $(this).appendTo($('.vertical-list:nth-child(2)'));
+                    }
+                });
+            }else{
+                $('.vertical-list .movable').prependTo($('.vertical-list:last-child'));
             }
         //  Страница "услуга"
         } else if ($('article').data('page') == 'service') {
@@ -28,17 +41,17 @@ $(document).ready(function () {
                 $('article.content .all-product:first-child').appendTo($('.information-block'));
                 $('article.content .social-buttons').appendTo($('.information-block'));
             }
+        //  Страница "технология"
+        } else if ($('article').data('page') == 'technology') {
 
-            /*if ($(window).width() <= '780') {
-                $('.interest').each(function(i){
-                    $(this).appendTo($('.col-1-2.int')).data('from',(i+1));
-                });
-            } else {
-                $('.interest').each(function(i){
-                    $(this).appendTo($('.fr-'+(i+1)));
-                });
-            }*/
-        //  Вопросы и ответы
+            if($(window).width() < 1000) {
+                $('.information-block .social-buttons').prependTo($('article.content[data-page=technology]'));
+                $('.information-block .all-product').prependTo($('article.content[data-page=technology]'));
+            }else{
+                $('article.content .all-product:first-child').appendTo($('.information-block'));
+                $('article.content .social-buttons').appendTo($('.information-block'));
+            }
+            //  Вопросы и ответы
         } else if ($('article').data('page') == 'question') {
             if ($(window).width() <= '700') {
                 $('.tofirst').prependTo($('.grid.grid-pad.question-page'));
@@ -99,6 +112,20 @@ $(document).ready(function () {
                 offsetY: 40,
                 blockElement: '.poleznoe-block-item'
             });
+        } else if ($('.content-wrap').data('page') == 'technologies') {
+            if($(window).width() <= 840) {
+                var count = $('.vertical-list:first-child .movable').length;
+                var half = count / 2 | 0;
+                $('.vertical-list:first-child .movable').each(function(i){
+                    if(i<half){
+                        $(this).prependTo($('.vertical-list:nth-child(2)'));
+                    }else{
+                        $(this).prependTo($('.vertical-list:nth-child(3)'));
+                    }
+                });
+            }else{
+                $('.vertical-list .movable').appendTo($('.vertical-list:first-child'));
+            }
         }
     }
 
@@ -109,15 +136,6 @@ $(document).ready(function () {
     var menuTop = 0;
     $(window).on('load', function () {
         if ($('article').data('page') == 'index') {
-            $('.slider').bxSlider({
-                nextText: '<div class="right-slide"></div>',
-                prevText: '<div class="left-slide"></div>',
-                preventDefaultSwipeY: false,
-                auto: true,
-                speed: 1500,
-                pause: 5000
-            });
-
             $('.wrapper').addClass('gray-background');
         }
         menuTop = $('.header').outerHeight()+1;
@@ -145,16 +163,12 @@ $(document).ready(function () {
     });
 
     $(window).on('load', function () {
-        if ($('article').data('page') == 'service') {
-            $('.service_slider').bxSlider({
-                nextText: '<div class="right-slide"></div>',
-                prevText: '<div class="left-slide"></div>',
-                auto: true,
-                speed: 1500,
-                pause: 4500
-            });
-        } else if ($('article').data('page') == 'stock') {
+        if ($('article').data('page') == 'stock') {
             $('.wrapper').addClass('gray-background');
+        } else if ($('.content-wrap').data('page') == 'technologies') {
+            $('.wrapper').addClass('gray-background2');
+        } else if ($('.content-wrap').data('page') == 'services') {
+            $('.wrapper').addClass('gray-background3');
         }
     });
     //========================== вызов меню на малых экранах
@@ -303,8 +317,12 @@ $(document).ready(function () {
     $('.bookmark.add').on('click',function(){
         add_favorite(this);
     });
-    }
-    );
+
+    $('.video-block__video-wrap').on('click', function (e) {
+        e.preventDefault();
+        $(this).find('.video_player').trigger('click');
+    });
+});
 
 
 
@@ -319,6 +337,65 @@ $(window).on('load resize', function () {
             $('.col_1-3:nth-child(1) .removable').removeClass('removable').appendTo($('.col_1-3:nth-child(3)'));
             $('.col_1-3:nth-child(2) .removable').removeClass('removable').appendTo($('.col_1-3:nth-child(3)'));
             $('.col_1-3:nth-child(3)').removeClass('hide-block');
+        }
+    }
+});
+function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+function giveIFrameSrc(url) {
+    var pos;
+    var resultSrc;
+    if (~url.indexOf("vimeo.com/")){
+        pos = url.indexOf("vimeo.com/") + 10;
+        resultSrc = 'https://player.vimeo.com/video/' + url.substr(pos) + '?autoplay=1&color=ff0179&title=0&byline=0&portrait=0';
+        return resultSrc;
+    }
+    if (~url.indexOf("watch?v=")){
+        pos = url.indexOf("watch?v=") + 8;
+        resultSrc = 'https://www.youtube.com/embed/' + url.substr(pos) + '?autoplay=1&autohide=1&rel=0&amp;showinfo=0?autoplay=1&autohide=1';
+        return resultSrc;
+    }
+}
+r(function(){
+    if (!document.getElementsByClassName) {
+        // Поддержка IE8
+        var getElementsByClassName = function(node, classname) {
+            var a = [];
+            var re = new RegExp('(^| )'+classname+'( |$)');
+            var els = node.getElementsByTagName("*");
+            for(var i=0,j=els.length; i<j; i++)
+                if(re.test(els[i].className))a.push(els[i]);
+            return a;
+        }
+        var videos = getElementsByClassName(document.body,"video_player");
+    } else {
+        var videos = document.getElementsByClassName("video_player");
+    }
+
+    var nb_videos = videos.length;
+    for (var i=0; i<nb_videos; i++) {
+        videos[i].style.backgroundImage = 'url(/images/' + videos[i].getAttribute("data-preview");
+
+        // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+        var play = document.createElement("div");
+        play.setAttribute("class","play");
+        videos[i].appendChild(play);
+
+        videos[i].onclick = function() {
+            // создаем iframe со включенной опцией autoplay
+            var iframe = document.createElement("iframe");
+            var iframe_src = giveIFrameSrc(this.getAttribute("data-link"));
+            iframe.setAttribute("src",iframe_src);
+            iframe.setAttribute("frameborder",'0');
+            iframe.setAttribute("webkitallowfullscreen",'');
+            iframe.setAttribute("mozallowfullscreen",'');
+            iframe.setAttribute("allowfullscreen",'');
+
+            // Высота и ширина iframe должны быть такими же, как и у родительского блока
+            iframe.style.width  = '100%';
+            iframe.style.height = '100%';
+
+            // Заменяем миниатюру плеером с YouTube
+            this.parentNode.replaceChild(iframe, this);
         }
     }
 });
