@@ -5,7 +5,7 @@
     <?php //$title = $static_index_page->page_title_field or 'MEDSTYLE Алматы | Клиника эстетической медецины'
     $title = $static_index_page->page_title_field; ?>
     <div class="head-slider">
-        <div class="fotorama" data-auto="true" data-autoplay="7000" data-ratio="1400/700"
+        <div class="fotorama" data-auto="true" data-autoplay="7000" data-ratio="1300/650"
              data-allowfullscreen="false"
              data-loop="true"
              data-transition="slide">
