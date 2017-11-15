@@ -31,18 +31,16 @@
                         <div class="answer-row">
                             <div class="answer-wrapper">
                                 <div class="grid test">
-                                    <div class="col-1-2">
-                                        <div class="specialist">
-                                            @foreach($spec as $spec_item)
-                                                @if($spec_item->id_field  == $item->spec_id_field)
-                                                    <img src="/images/{{$spec_item->spec_photo_image->icon_link}}" alt="{{$spec_item->spec_photo_image->alt}}" class="photo">
-                                                @endif
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                    <div class="col-1-2">
+                                    <div class="answer-wrapper2">
                                         <div class="answer">
                                             <div class="text-wrapper">
+                                                <div class="specialist">
+                                                    @foreach($spec as $spec_item)
+                                                        @if($spec_item->id_field  == $item->spec_id_field)
+                                                            <img src="/images/{{$spec_item->spec_photo_image->icon_link}}" alt="{{$spec_item->spec_photo_image->alt}}" class="photo">
+                                                        @endif
+                                                    @endforeach
+                                                </div>
                                                 @foreach($spec as $spec_item)
                                                     @if($spec_item->id_field  == $item->spec_id_field)
                                                         <p class="specialist-name">{{$spec_item->name_field}}</p>
@@ -53,7 +51,7 @@
                                                         <p class="specialist-profession">{{$spec_item->profession_field}}</p>
                                                     @endif
                                                 @endforeach
-                                                <p class="answer-text">{!! $item->answer_text_field !!}</p>
+                                                <div class="answer-text">{!! $item->answer_text_field !!}</div>
                                             </div>
                                         </div>
                                     </div>

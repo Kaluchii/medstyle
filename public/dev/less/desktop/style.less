@@ -559,7 +559,7 @@ a.popup-changer.category {
   font-size: 16px
 }
 
-.all-product.category, .answer {
+.all-product.category {
   padding-left: 20px;
   display: inline-block
 }
@@ -622,12 +622,20 @@ p.question-text {
   box-sizing: border-box
 }
 
+.answer-wrapper .specialist{
+  float: left;
+  padding: 0 15px 15px 0;
+}
+
 a.poleznoe-link, a.send-ask {
   -webkit-box-sizing: border-box
 }
 
-.answer {
-  vertical-align: top
+.answer-text{
+  color: #666666;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
 }
 
 .text-wrapper {
@@ -638,12 +646,9 @@ a.poleznoe-link, a.send-ask {
   padding-top: 39px
 }
 
-.grid.grid-pad.question-page .col-1-2:first-child {
-  width: 70%
-}
-
-.grid.grid-pad.question-page .col-1-2:last-child {
-  width: 30%
+.grid.grid-pad.question-page .answer-wrapper2 {
+  position: relative;
+  padding: 0 15px;
 }
 
 img.photo {
@@ -655,7 +660,6 @@ img.photo {
   background: #e7e8e9;
   padding-top: 15px;
   padding-left: 20px;
-  min-width: 260px;
 }
 
 .input {

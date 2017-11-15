@@ -286,11 +286,9 @@
     width: 100%
   }
 
-  p.answer-text {
-    position: relative;
-    left: -120px;
-    top: 25px;
-    width: 200%
+  .answer-text{
+    clear: both;
+    padding-top: 10px;
   }
 }
 
@@ -394,6 +392,17 @@
     display: block;
     width: 100%;
     float: none
+  }
+
+  .specialist{
+    display: block;
+    margin: 0 auto;
+    max-width: 202px;
+    text-align: center;
+  }
+
+  .spec-prof{
+    margin: 0 auto;
   }
 
   .grid.grid-pad.specialists .col-1-4 {
@@ -625,7 +634,6 @@
     padding-right: 20px
   }
 }
-
 @media screen and (min-width: 1100px) {
   .all-product.category, .grid.grid-pad.question-page, .grid.grid-pad.services, h1.content-head-title {
     padding-left: 90px
@@ -644,11 +652,12 @@
   }
 
   .grid.grid-pad.question-page .col-1-2:last-child {
+    min-width: 270px;
     width: 25%
   }
 
   .grid.grid-pad.question-page .col-1-2:first-child {
-    width: 75%
+    width: ~'calc(100% - 270px)'
   }
 
   .answer-wrapper .grid.test .col-1-2:last-child {
@@ -677,7 +686,11 @@
     padding-top: 30px
   }
 }
-
+@media screen and (min-width: 1170px) {
+  .grid.grid-pad.question-page .col-1-2:first-child {
+    width: 75%;
+  }
+}
 @media screen and (max-width: 700px) {
   .grid.grid-pad.specialist .col-1-2:last-child {
     width: 100%
@@ -1072,13 +1085,6 @@
 
   .grid.margin .all-product {
     padding-top: 320px
-  }
-
-  .answer p:nth-child(n+3) {
-    position: relative;
-    left: -120px;
-    top: 25px;
-    min-width: 170%
   }
 }
 
