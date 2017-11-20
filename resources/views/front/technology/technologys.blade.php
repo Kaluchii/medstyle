@@ -22,7 +22,7 @@
                             <div class="technologies-item__img-wrap">
                                 <img src="/images/{{$item->big_image_image->secondary_link}}" alt="" class="technologies-item__img">
                             </div>
-                            <h3 class="technologies-item__title"><span class="technologies-item__link-text">{{$item->name_field}} {{$i}}</span></h3>
+                            <h3 class="technologies-item__title"><span class="technologies-item__link-text">{{$item->name_field}}</span></h3>
                         </a>
                         <div class="technologies-item__text">{!! $item->desrc_0_field !!}</div>
                     </li>
