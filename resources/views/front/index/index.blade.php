@@ -40,7 +40,7 @@
         </div>
         <div class="video-wrap">
             <div class="video-block video-block--main-page">
-                <h1 class="video-block__title">{{$video->title_field}}</h1>
+                <h1 class="video-block__title video-block__title--main-page">{{$video->title_field}}</h1>
                 <ul class="video-block__list video-block__list--main-page">
                     <?php $count_video = 0;?>
                     @foreach($video->videos_group as $item)

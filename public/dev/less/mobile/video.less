@@ -52,6 +52,10 @@
 @media screen and (max-width: 1024px){
   .video-block__title {
     font-size: 56px;
+
+    &--main-page{
+      font-size: 44px;
+    }
   }
 }
 
@@ -106,8 +110,24 @@
 }
 
 @media screen and (max-width: 600px){
-  .video-block__title {
-    font-size: 44px;
+  .video-block{
+    &__title {
+      font-size: 44px;
+    }
+
+    &__name-wrap{
+      margin-top: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 415px){
+  .video-block{
+    &__title{
+      &--main-page{
+        font-size: 38px;
+      }
+    }
   }
 }
 
