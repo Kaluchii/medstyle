@@ -25,7 +25,7 @@ $(document).ready(function () {
         } else {
             $fotorama = $('.fotorama').fotorama({
                 width: "100%",
-                height: "550"
+                height: "500"
             });
         }
         var fotorama = $fotorama.data('fotorama');
@@ -39,7 +39,7 @@ $(document).ready(function () {
             } else {
                 fotorama.resize({
                     width: "100%",
-                    height: "550"
+                    height: "500"
                 });
             }
         });
