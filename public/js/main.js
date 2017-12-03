@@ -20,12 +20,14 @@ $(document).ready(function () {
             $fotorama = $('.fotorama').fotorama({
                 ratio: "2/1",
                 width: "100%",
-                height: "auto"
+                height: "auto",
+                margin: 0
             });
         } else {
             $fotorama = $('.fotorama').fotorama({
                 width: "100%",
-                height: "500"
+                height: "500",
+                margin: 0
             });
         }
         var fotorama = $fotorama.data('fotorama');
