@@ -4,7 +4,7 @@ return [
 
     'slider_wrap' =>[
         'sizes' => [
-            ['width'=>1980, 'height'=>null, 'sufix'=>'primary', 'mod'=>false],
+            ['width'=>2000, 'height'=>null, 'sufix'=>'primary', 'mod'=>false],
             ['width'=>240, 'height'=>null, 'sufix'=>'secondary'],
             ['width'=>60, 'height'=>null, 'sufix'=>'preview'],
             ['width'=>60, 'height'=>null, 'sufix'=>'prefix'],
@@ -13,7 +13,7 @@ return [
     ],
     'slider_desc_wrap' =>[
         'sizes' => [
-            ['width'=>1300, 'height'=>null, 'sufix'=>'primary', 'mod'=>false],
+            ['width'=>2000, 'height'=>null, 'sufix'=>'primary', 'mod'=>false],
             ['width'=>240, 'height'=>null, 'sufix'=>'secondary'],
             ['width'=>60, 'height'=>null, 'sufix'=>'preview'],
             ['width'=>60, 'height'=>null, 'sufix'=>'prefix'],
