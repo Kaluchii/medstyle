@@ -1,7 +1,20 @@
 @media screen and (max-width: 1024px) {
   .fotorama{
     margin: 0;
+    overflow: visible;
     border-radius: 0;
+
+    &__desktop-img{
+      display: none;
+    }
+
+    &__mobile-img{
+      display: block;
+    }
+
+    &__nav-wrap{
+      bottom: -50px !important;
+    }
   }
 }
 

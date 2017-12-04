@@ -5,13 +5,17 @@
     <?php //$title = $static_index_page->page_title_field or 'MEDSTYLE Алматы | Клиника эстетической медецины'
     $title = $static_index_page->page_title_field; ?>
     <div class="head-slider">
-        <div class="fotorama" data-auto="true" data-autoplay="7000" data-ratio="1300/650"
+        <div class="fotorama" data-auto="true" data-autoplay="7000"
              data-allowfullscreen="false"
              data-loop="true"
              data-transition="slide">
             @foreach($static_index_page->slider_group as $item)
-                <div class="fotorama__link-wrap" data-img="/images/{{$item->desc_wrap_image->primary_link}}?{{$item->desc_wrap_image->cache_index}}"><a
-                            href="{{$item->link_field}}" class="fotorama__page-link"></a></div>
+                <div class="fotorama__link-wrap" >
+                    <a href="{{$item->link_field}}" class="fotorama__page-link">
+                        <img class="fotorama__desktop-img" src="/images/{{$item->desc_wrap_image->primary_link}}?{{$item->desc_wrap_image->cache_index}}" alt="">
+                        <img class="fotorama__mobile-img" src="/images/{{$item->wrap_image->primary_link}}?{{$item->wrap_image->cache_index}}" alt="">
+                    </a>
+                </div>
             @endforeach
         </div>
     </div>
