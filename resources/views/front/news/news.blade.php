@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-3-12">
                                 <a href="{{$item->slug_field}}" class="shares-link">
-                                    <img src="/images/{{$item->prev_image->primary_link}}" alt="">
+                                    <img src="/images/{{$item->prev_image->primary_link}}?{{$item->prev_image->cache_index}}" alt="">
                                 </a>
                             </div>
                         </div>
