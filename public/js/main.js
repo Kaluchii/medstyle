@@ -14,7 +14,15 @@ $(document).ready(function () {
         }
     });
 
-    if($('.fotorama').length){
+    $(".js-slick").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 4,
+        variableWidth: true
+    });
+
+    /*if($('.fotorama').length){
         var $fotorama;
         if($(window).width() <= 1024) {
             $fotorama = $('.fotorama').fotorama({
@@ -45,7 +53,7 @@ $(document).ready(function () {
                 });
             }
         });
-    }
+    }*/
 
     //=========================== Магия адаптивной верстки
     // Перестройка блоков контента на разных страницах на разных разрешениях
