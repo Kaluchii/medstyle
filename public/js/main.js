@@ -16,10 +16,23 @@ $(document).ready(function () {
 
     $(".js-slick").slick({
         dots: true,
+        arrows: false,
         infinite: true,
-        centerMode: true,
-        slidesToShow: 4,
-        variableWidth: true
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 941,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true
+                }
+            }
+        ]
     });
 
     /*if($('.fotorama').length){

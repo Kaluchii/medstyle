@@ -4,7 +4,7 @@
     @include('front.meta', ['meta_description' => $static_index_page->seo_description_field, 'meta_keywords' => $static_index_page->seo_keywords_field])
     <?php //$title = $static_index_page->page_title_field or 'MEDSTYLE Алматы | Клиника эстетической медецины'
     $title = $static_index_page->page_title_field; ?>
-    <h1 class="index-title">Дайте нам месяц и мы верням вам 10 лет</h1>
+    <h1 class="index-title">Дайте нам месяц и мы&nbsp;вернем вам&nbsp;10&nbsp;лет</h1>
     <div class="head-slider">
         <div class="head-slider__list js-slick">
             <div class="head-slider__item tile-item" style="max-width: 370px;">
@@ -28,12 +28,26 @@
                 <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">LPG Cellu Endermolab</a> со скидкой 20%</h3>
                 <div class="tile-item__text">Уменьшение объема, устранение целлюлита и уплотнение кожи именно там, где вы хотите.</div>
             </div>
+            <div class="head-slider__item tile-item" style="max-width: 370px;">
+                <a href="/service/" class="tile-item__img-wrap">
+                    <img src="/img/plch1.jpg" alt="" class="tile-item__img">
+                </a>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Нити Aptos</a> со скидкой 20% всю зиму</h3>
+                <div class="tile-item__text">Создайте корсет для лица и шеи, препятствующий опусканию тканей и сохраняющий форму лица подтянутой.</div>
+            </div>
             <div class="head-slider__item tile-item" style="max-width: 520px;">
                 <a href="/service/" class="tile-item__img-wrap">
                     <img src="/img/plch2.jpg" alt="" class="tile-item__img">
                 </a>
                 <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Лифтинг и уплотнение</a> тканей без операций со скидкой 20%</h3>
                 <div class="tile-item__text">UltraFormer эффективно воздействует на мягкие ткани и SMAS применяя неинвазивную технологию HIFU</div>
+            </div>
+            <div class="head-slider__item tile-item" style="max-width: 370px;">
+                <a href="/service/" class="tile-item__img-wrap">
+                    <img src="/img/plch3.jpg" alt="" class="tile-item__img">
+                </a>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">LPG Cellu Endermolab</a> со скидкой 20%</h3>
+                <div class="tile-item__text">Уменьшение объема, устранение целлюлита и уплотнение кожи именно там, где вы хотите.</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 370px;">
                 <a href="/service/" class="tile-item__img-wrap">
@@ -48,6 +62,13 @@
                 </a>
                 <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Лифтинг и уплотнение</a> тканей без операций со скидкой 20%</h3>
                 <div class="tile-item__text">UltraFormer эффективно воздействует на мягкие ткани и SMAS применяя неинвазивную технологию HIFU</div>
+            </div>
+            <div class="head-slider__item tile-item" style="max-width: 370px;">
+                <a href="/service/" class="tile-item__img-wrap">
+                    <img src="/img/plch3.jpg" alt="" class="tile-item__img">
+                </a>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">LPG Cellu Endermolab</a> со скидкой 20%</h3>
+                <div class="tile-item__text">Уменьшение объема, устранение целлюлита и уплотнение кожи именно там, где вы хотите.</div>
             </div>
         </div>
         {{--<div class="fotorama" data-auto="true" data-autoplay="7000"

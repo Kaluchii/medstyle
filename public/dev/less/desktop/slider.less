@@ -1,14 +1,21 @@
-.head-slider {
+.head-slider{
   max-width: 1300px;
-  margin: 25px auto;
+  width: ~'calc(100% - 60px)';
+  margin: 25px auto 0;
   overflow: hidden;
-  padding-bottom: 50px;
+  padding-bottom: 85px;
 
   &__list{}
 
   &__item{
     margin: 0 10px;
-    width: 100%;
+  }
+}
+.slick-slide{
+  width: ~'calc((100vw - 60px) / 100 * 29.230769231 - 15px)';
+
+  &:nth-child(3n+2){
+    width: ~'calc((100vw - 60px) / 100 * 41.538461538 - 10px)';
   }
 }
 
