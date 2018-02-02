@@ -207,11 +207,7 @@ $(document).ready(function () {
         }
     }).on('scroll', function(){
         if( $(window).scrollTop() >= menuTop ){
-            if ($('article').data('page') == 'index' || $(window).width() <= '1000') {
-                $('.main-menu').addClass('fixed');
-            }else {
-                $('.main-menu').removeClass('fixed');
-            }
+            $('.main-menu').addClass('fixed');
         }else {
             $('.main-menu').removeClass('fixed');
         }
