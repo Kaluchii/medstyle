@@ -9,66 +9,45 @@
         <div class="head-slider__list js-slick">
             <div class="head-slider__item tile-item" style="max-width: 370px;">
                 <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch1.jpg" alt="" class="tile-item__img">
+                    <img src="/dev_images/UF.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Нити Aptos</a> со скидкой 20% всю зиму</h3>
-                <div class="tile-item__text">Создайте корсет для лица и шеи, препятствующий опусканию тканей и сохраняющий форму лица подтянутой.</div>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">SMAS–лифтинг</a><br> -20%</h3>
+                <div class="tile-item__text">Лифтинг и уплотнение тканей без операций и инъекций</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 520px;">
                 <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch2.jpg" alt="" class="tile-item__img">
+                    <img src="/dev_images/TEOSYAL.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Пиллинги</a> со скидкой 20%</h3>
-                <div class="tile-item__text">Устранение летних пигментных пятен при помощи срединных и поверхностных (гликолевых) пиллингов.</div>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Teosyal RHA</a><br> -20%</h3>
+                <div class="tile-item__text">Эффект заметен сразу, лицо подтягивается, морщины исчезают</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 370px;">
                 <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch3.jpg" alt="" class="tile-item__img">
+                    <img src="/dev_images/LE.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">LPG Cellu Endermolab</a> со скидкой 20%</h3>
-                <div class="tile-item__text">Уменьшение объема, устранение целлюлита и уплотнение кожи именно там, где вы хотите.</div>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Лазерная эпиляция</a><br> -20%</h3>
+                <div class="tile-item__text">Удаление и предотвращение роста нежелательных волос на лице и теле навсегда</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 370px;">
                 <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch1.jpg" alt="" class="tile-item__img">
+                    <img src="/dev_images/DNK.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Нити Aptos</a> со скидкой 20% всю зиму</h3>
-                <div class="tile-item__text">Создайте корсет для лица и шеи, препятствующий опусканию тканей и сохраняющий форму лица подтянутой.</div>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">ДНК – анализ</a></h3>
+                <div class="tile-item__text">Индивидуальные рекомендации исходя их потребностей вашего организма.</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 520px;">
                 <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch2.jpg" alt="" class="tile-item__img">
+                    <img src="/dev_images/DYS.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Лифтинг и уплотнение</a> тканей без операций со скидкой 20%</h3>
-                <div class="tile-item__text">UltraFormer эффективно воздействует на мягкие ткани и SMAS применяя неинвазивную технологию HIFU</div>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Диспорт</a></h3>
+                <div class="tile-item__text">Эффект выраженного лифтинга, Разглаживает мимические морщины. Лечение гипергидроза.</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 370px;">
                 <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch3.jpg" alt="" class="tile-item__img">
+                    <img src="/dev_images/GIA.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">LPG Cellu Endermolab</a> со скидкой 20%</h3>
-                <div class="tile-item__text">Уменьшение объема, устранение целлюлита и уплотнение кожи именно там, где вы хотите.</div>
-            </div>
-            <div class="head-slider__item tile-item" style="max-width: 370px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch1.jpg" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Пиллинги</a> со скидкой 20%</h3>
-                <div class="tile-item__text">Устранение летних пигментных пятен при помощи срединных и поверхностных (гликолевых) пиллингов.</div>
-            </div>
-            <div class="head-slider__item tile-item" style="max-width: 520px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch2.jpg" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Лифтинг и уплотнение</a> тканей без операций со скидкой 20%</h3>
-                <div class="tile-item__text">UltraFormer эффективно воздействует на мягкие ткани и SMAS применяя неинвазивную технологию HIFU</div>
-            </div>
-            <div class="head-slider__item tile-item" style="max-width: 370px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/img/plch3.jpg" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">LPG Cellu Endermolab</a> со скидкой 20%</h3>
-                <div class="tile-item__text">Уменьшение объема, устранение целлюлита и уплотнение кожи именно там, где вы хотите.</div>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Гиаплазма</a></h3>
+                <div class="tile-item__text">Процедура сочетает в себе эффект плазмалифтинга и ревитализации.Сияние и увлажнение кожи лица.</div>
             </div>
         </div>
         {{--<div class="fotorama" data-auto="true" data-autoplay="7000"
