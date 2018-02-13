@@ -11,21 +11,21 @@
                 <a href="/service/" class="tile-item__img-wrap">
                     <img src="/dev_images/UF.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">SMAS–лифтинг</a><br> -20%</h3>
-                <div class="tile-item__text">Лифтинг и уплотнение тканей без операций и инъекций</div>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">SMAS–лифтинг</a> лица со скидкой 20%</h3>
+                <div class="tile-item__text">Лифтинг и эффективное уплотнение тканей без инъекций и операций</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 520px;">
                 <a href="/service/" class="tile-item__img-wrap">
                     <img src="/dev_images/TEOSYAL.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Teosyal RHA</a><br> -20%</h3>
-                <div class="tile-item__text">Эффект заметен сразу, лицо подтягивается, морщины исчезают</div>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Инъекционные методики</a> на препаратах Teosyal со&nbsp;скидкой&nbsp;20%</h3>
+                <div class="tile-item__text">Устранение морщин и складок, коррекция формы губ и контура лица</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 370px;">
                 <a href="/service/" class="tile-item__img-wrap">
                     <img src="/dev_images/LE.png" alt="" class="tile-item__img">
                 </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Лазерная эпиляция</a><br> -20%</h3>
+                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Лазерная эпиляция</a><br> со скидкой 20%</h3>
                 <div class="tile-item__text">Удаление и предотвращение роста нежелательных волос на лице и теле навсегда</div>
             </div>
             <div class="head-slider__item tile-item" style="max-width: 370px;">
