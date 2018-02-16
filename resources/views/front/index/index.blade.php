@@ -7,62 +7,34 @@
     <h1 class="index-title">Дайте нам месяц и мы&nbsp;вернем вам&nbsp;10&nbsp;лет</h1>
     <div class="head-slider">
         <div class="head-slider__list js-slick">
-            <div class="head-slider__item tile-item" style="max-width: 370px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/dev_images/UF.png" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">SMAS–лифтинг</a> лица со скидкой 20%</h3>
-                <div class="tile-item__text">Лифтинг и эффективное уплотнение тканей без инъекций и операций</div>
-            </div>
-            <div class="head-slider__item tile-item" style="max-width: 520px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/dev_images/TEOSYAL.png" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Инъекционные методики</a> на препаратах Teosyal со&nbsp;скидкой&nbsp;20%</h3>
-                <div class="tile-item__text">Устранение морщин и складок, коррекция формы губ и контура лица</div>
-            </div>
-            <div class="head-slider__item tile-item" style="max-width: 370px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/dev_images/LE.png" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Лазерная эпиляция</a><br> со скидкой 20%</h3>
-                <div class="tile-item__text">Удаление и предотвращение роста нежелательных волос на лице и теле навсегда</div>
-            </div>
-            <div class="head-slider__item tile-item" style="max-width: 370px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/dev_images/DNK.png" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">ДНК – анализ</a></h3>
-                <div class="tile-item__text">Индивидуальные рекомендации исходя их потребностей вашего организма.</div>
-            </div>
-            <div class="head-slider__item tile-item" style="max-width: 520px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/dev_images/DYS.png" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Диспорт</a></h3>
-                <div class="tile-item__text">Эффект выраженного лифтинга, Разглаживает мимические морщины. Лечение гипергидроза.</div>
-            </div>
-            <div class="head-slider__item tile-item" style="max-width: 370px;">
-                <a href="/service/" class="tile-item__img-wrap">
-                    <img src="/dev_images/GIA.png" alt="" class="tile-item__img">
-                </a>
-                <h3 class="tile-item__title"><a href="#" class="tile-item__link pink-link">Гиаплазма</a></h3>
-                <div class="tile-item__text">Процедура сочетает в себе эффект плазмалифтинга и ревитализации.Сияние и увлажнение кожи лица.</div>
-            </div>
-        </div>
-        {{--<div class="fotorama" data-auto="true" data-autoplay="7000"
-             data-allowfullscreen="false"
-             data-loop="true"
-             data-transition="slide">
+            <?php $i= 0;
+            function str_replace_once($search, $replace, $text)
+            {
+                $pos = strpos($text, $search);
+                return $pos!==false ? substr_replace($text, $replace, $pos, strlen($search)) : $text;
+            }
+            function wrap_in_link( $str, $slug)
+            {
+                $astart = '<a href=\'' . $slug . '\' class=\'tile-item__link pink-link\'>';
+                $aend = '</a>';
+                $str = str_replace_once('#', $astart, $str);
+                $str = str_replace_once('#', $aend, $str);
+                return $str;
+            }
+            ?>
+
             @foreach($static_index_page->slider_group as $item)
-                <div class="fotorama__link-wrap" >
-                    <a href="{{$item->link_field}}" class="fotorama__page-link">
-                        <img class="fotorama__desktop-img" src="/images/{{$item->desc_wrap_image->primary_link}}?{{$item->desc_wrap_image->cache_index}}" alt="">
-                        <img class="fotorama__mobile-img" src="/images/{{$item->wrap_image->primary_link}}?{{$item->wrap_image->cache_index}}" alt="">
+                <?php $i++ ?>
+                <div class="head-slider__item tile-item" style="@if($i % 3 == 2)max-width: 520px; @else max-width: 370px; @endif">
+                    <a href="{{$item->link_field}}" class="tile-item__img-wrap">
+                        <img src="/images/{{$item->desc_wrap_image->primary_link}}?{{$item->desc_wrap_image->cache_index}}" alt="{{$item->desc_wrap_image->alt}}" class="tile-item__img">
                     </a>
+                    <?php $link = wrap_in_link($item->slide_title_field, $item->link_field); ?>
+                    <h3 class="tile-item__title">{!! $link !!}</h3>
+                    <div class="tile-item__text">{{$item->descr_field}}</div>
                 </div>
             @endforeach
-        </div>--}}
+        </div>
     </div>
     <article class="content test-1 test-2" data-page="index">
         <div class="service-proc">
