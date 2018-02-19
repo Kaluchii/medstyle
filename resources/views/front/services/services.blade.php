@@ -19,7 +19,9 @@
                                 <h3 class="category-item__title" id="{{$item_category->category_title_field}}">{{$item_category->category_title_field}}</h3>
                                 <ul class="category-item__services-list strings-list">
                                     @foreach($item_category->services_group as $item_service)
-                                        <li class="strings-list__item"><a href="/service/{{$item_service->slug_field}}" class="strings-list__link pink-link">{{$item_service->name_field}}</a><span class="strings-list__stock">{{$item_service->discount_field}}</span></li>
+                                        @if($item_service->slug_field != 'диспорт')
+                                            <li class="strings-list__item"><a href="/service/{{$item_service->slug_field}}" class="strings-list__link pink-link">{{$item_service->name_field}}</a><span class="strings-list__stock">{{$item_service->discount_field}}</span></li>
+                                        @endif
                                     @endforeach
                                 </ul>
                             </li>

@@ -3,7 +3,10 @@
 @section('content')
 @include('front.meta', ['meta_description' => $service->seo_description_field, 'meta_keywords' => $service->seo_keywords_field])
     <?php $title = $service->page_title_field ?>
-    <div class="grid     @if($service->discount_comment_field == '') margin @endif">
+    @if($service->slug_field == 'диспорт')
+        @include('front.page_close')
+    @endif
+    <div class="grid @if($service->discount_comment_field == '') margin @endif">
         <div class="col-1-1 head">
             <div class="head-section">
                 <div class="head-img-wrap">
