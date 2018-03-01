@@ -18,7 +18,7 @@ $(document).ready(function () {
         var $fotorama;
         if($(window).width() <= 1024) {
             $fotorama = $('.fotorama').fotorama({
-                ratio: "2/1",
+                ratio: "2000/1500",
                 width: "100%",
                 height: "auto",
                 margin: 0
@@ -34,7 +34,7 @@ $(document).ready(function () {
         $(window).on('resize', function () {
             if($(window).width() <= 1024) {
                 fotorama.resize({
-                    ratio: "2/1",
+                    ratio: "2000/1500",
                     width: "100%",
                     height: "auto"
                 });
