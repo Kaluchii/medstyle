@@ -13,7 +13,7 @@ return [
     ],
     'slider_desc_wrap' =>[
         'sizes' => [
-            ['width'=>2000, 'height'=>null, 'sufix'=>'primary', 'mod'=>false],
+            ['width'=>null, 'height'=>350, 'sufix'=>'primary', 'mod'=>false],
             ['width'=>240, 'height'=>null, 'sufix'=>'secondary'],
             ['width'=>60, 'height'=>null, 'sufix'=>'preview'],
             ['width'=>60, 'height'=>null, 'sufix'=>'prefix'],

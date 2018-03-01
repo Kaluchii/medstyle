@@ -1,6 +1,7 @@
 @media screen and (max-width: 1024px) {
-  .fotorama{
+  /*.fotorama{
     margin: 0;
+    overflow: visible;
     border-radius: 0;
 
     &__desktop-img{
@@ -10,11 +11,37 @@
     &__mobile-img{
       display: block;
     }
+
+    &__nav-wrap{
+      bottom: -50px !important;
+    }
+  }*/
+}
+
+@media screen and (max-width: 940px) {
+  .head-slider{
+    &__item{
+      //max-width: ~'calc(100vw - 60px)'!important;
+    }
+  }
+
+  .slick-slide{
+    &:nth-child(n){
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .head-slider{
+    &__item{
+      max-width: ~'calc(100vw - 60px)'!important;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .fotorama{
+  /*.fotorama{
     .fotorama{
       &__arr{
         width: 60px;
@@ -23,11 +50,11 @@
         background-size: 20px 40px;
       }
     }
-  }
+  }*/
 }
 
 @media screen and (max-width: 520px) {
-  .fotorama{
+  /*.fotorama{
     .fotorama{
       &__arr{
         &--prev{
@@ -52,6 +79,16 @@
       &__dot{
         width: 40px;
       }
+    }
+  }*/
+}
+
+@media screen and (max-width: 420px) {
+  .head-slider{
+    width: ~'calc(100% - 40px)';
+
+    &__item{
+      max-width: ~'calc(100vw - 40px)'!important;
     }
   }
 }

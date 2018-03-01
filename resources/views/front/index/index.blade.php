@@ -4,17 +4,34 @@
     @include('front.meta', ['meta_description' => $static_index_page->seo_description_field, 'meta_keywords' => $static_index_page->seo_keywords_field])
     <?php //$title = $static_index_page->page_title_field or 'MEDSTYLE Алматы | Клиника эстетической медецины'
     $title = $static_index_page->page_title_field; ?>
+    <h1 class="index-title">Дайте нам месяц и мы&nbsp;вернем вам&nbsp;10&nbsp;лет</h1>
     <div class="head-slider">
-        <div class="fotorama" data-auto="true" data-autoplay="7000"
-             data-allowfullscreen="false"
-             data-loop="true"
-             data-transition="slide">
+        <div class="head-slider__list js-slick">
+            <?php $i= 0;
+            function str_replace_once($search, $replace, $text)
+            {
+                $pos = strpos($text, $search);
+                return $pos!==false ? substr_replace($text, $replace, $pos, strlen($search)) : $text;
+            }
+            function wrap_in_link( $str, $slug)
+            {
+                $astart = '<a href=\'' . $slug . '\' class=\'tile-item__link pink-link\'>';
+                $aend = '</a>';
+                $str = str_replace_once('#', $astart, $str);
+                $str = str_replace_once('#', $aend, $str);
+                return $str;
+            }
+            ?>
+
             @foreach($static_index_page->slider_group as $item)
-                <div class="fotorama__link-wrap" >
-                    <a href="{{$item->link_field}}" class="fotorama__page-link">
-                        <img class="fotorama__desktop-img" src="/images/{{$item->desc_wrap_image->primary_link}}?{{$item->desc_wrap_image->cache_index}}" alt="">
-                        <img class="fotorama__mobile-img" src="/images/{{$item->wrap_image->primary_link}}?{{$item->wrap_image->cache_index}}" alt="">
+                <?php $i++ ?>
+                <div class="head-slider__item tile-item" style="@if($i % 3 == 2)max-width: 520px; @else max-width: 370px; @endif">
+                    <a href="{{$item->link_field}}" class="tile-item__img-wrap">
+                        <img src="/images/{{$item->desc_wrap_image->primary_link}}?{{$item->desc_wrap_image->cache_index}}" alt="{{$item->desc_wrap_image->alt}}" class="tile-item__img">
                     </a>
+                    <?php $link = wrap_in_link($item->slide_title_field, $item->link_field); ?>
+                    <h3 class="tile-item__title">{!! $link !!}</h3>
+                    <div class="tile-item__text">{{$item->descr_field}}</div>
                 </div>
             @endforeach
         </div>
@@ -44,7 +61,7 @@
         </div>
         <div class="video-wrap">
             <div class="video-block video-block--main-page">
-                <h1 class="video-block__title video-block__title--main-page">{{$video->title_field}}</h1>
+                <h2 class="video-block__title video-block__title--main-page">{{$video->title_field}}</h2>
                 <ul class="video-block__list video-block__list--main-page">
                     <?php $count_video = 0;?>
                     @foreach($video->videos_group as $item)

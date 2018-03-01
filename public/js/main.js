@@ -14,7 +14,28 @@ $(document).ready(function () {
         }
     });
 
-    if($('.fotorama').length){
+    $(".js-slick").slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 941,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true
+                }
+            }
+        ]
+    });
+
+    /*if($('.fotorama').length){
         var $fotorama;
         if($(window).width() <= 1024) {
             $fotorama = $('.fotorama').fotorama({
@@ -45,7 +66,7 @@ $(document).ready(function () {
                 });
             }
         });
-    }
+    }*/
 
     //=========================== Магия адаптивной верстки
     // Перестройка блоков контента на разных страницах на разных разрешениях
@@ -186,11 +207,7 @@ $(document).ready(function () {
         }
     }).on('scroll', function(){
         if( $(window).scrollTop() >= menuTop ){
-            if ($('article').data('page') == 'index' || $(window).width() <= '1000') {
-                $('.main-menu').addClass('fixed');
-            }else {
-                $('.main-menu').removeClass('fixed');
-            }
+            $('.main-menu').addClass('fixed');
         }else {
             $('.main-menu').removeClass('fixed');
         }

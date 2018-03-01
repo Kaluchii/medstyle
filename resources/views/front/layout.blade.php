@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="/images/1374164082_med_0.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('meta')
+    @yield('page_close')
     @include('front.scripts')
     @include('front.styles')
     @include('front.header')
