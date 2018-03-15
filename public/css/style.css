@@ -1760,6 +1760,9 @@ p.block-title {
 	font-size : 24px;
 	margin-bottom : 15px;
 }
+.bookmark .text{
+	margin-top: 0;
+}
 .head-img-wrap {
 	position : relative;
 	width : 100%;

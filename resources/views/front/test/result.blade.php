@@ -29,7 +29,6 @@
             <div class=""></div>
             <div class="col-1-2 bookmark">
                 <div class="gray">
-                    <img src="/images/mark.png" alt="">
                     <p class="text">
                         Добавьте результат теста в закладки браузера, чтобы вернуться к нему позднее.
                     </p>
