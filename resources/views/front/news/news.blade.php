@@ -57,7 +57,7 @@
                 <div class="stock-social">
                     <img src="/img/stock-social.png" alt="" class="stock-social-img">
                     <p class="stock-social-descr">Получайте акции через WhatsApp по номеру <span class="no-br">+7 777 178-29-26</span>
-                        и в&nbsp;нашем <a target="_blank" href="//facebook.com/medstyle.kz" class="stock-social-link">Facebook</a></p>
+                        или через <a target="_blank" href="//facebook.com/medstyle.kz" class="stock-social-link">Facebook</a> и <a target="_blank" href="https://www.instagram.com/medstyle_almaty/" class="stock-social-link">Instagram</a></p>
                 </div>
             </div>
         </div>

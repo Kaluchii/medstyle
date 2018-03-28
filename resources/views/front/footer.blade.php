@@ -15,8 +15,8 @@
             </div>
             <div class="footer-block">
                 <ul>
-                    <li><p class="footer-text">Полезные ссылки и скидки</p></li>
-                    <li><p class="footer-text">в нашем <a href="https://www.facebook.com/medstyle.kz" rel="nofollow" target="_blank" class="footer-link">Facebook</a></p></li>
+                    <li><p class="footer-text">Полезные советы и скидки</p></li>
+                    <li><p class="footer-text">в <a href="https://www.facebook.com/medstyle.kz" rel="nofollow" target="_blank" class="footer-link">Facebook</a> и <a href="https://www.instagram.com/medstyle_almaty/" rel="nofollow" target="_blank" class="footer-link">Instagram</a></p></li>
                 </ul>
             </div>
         </div>
