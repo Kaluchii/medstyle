@@ -35,44 +35,23 @@ $(document).ready(function () {
         ]
     });
 
-    /*if($('.fotorama').length){
-        var $fotorama;
-        if($(window).width() <= 1024) {
-            $fotorama = $('.fotorama').fotorama({
-                ratio: "2000/1500",
-                width: "100%",
-                height: "auto",
-                margin: 0
-            });
-        } else {
-            $fotorama = $('.fotorama').fotorama({
-                width: "100%",
-                height: "500",
-                margin: 0
-            });
-        }
-        var fotorama = $fotorama.data('fotorama');
-        $(window).on('resize', function () {
-            if($(window).width() <= 1024) {
-                fotorama.resize({
-                    ratio: "2000/1500",
-                    width: "100%",
-                    height: "auto"
-                });
-            } else {
-                fotorama.resize({
-                    width: "100%",
-                    height: "500"
-                });
-            }
-        });
-    }*/
+    var $fotorama = $('.js-fotorama-video').fotorama({
+        arrows: false,
+        maxwidth: '350px',
+        ratio: "350/255",
+        minheight: '320px',
+        click: false
+    });
+    // 2. Get the API object.
+    var fotorama = $fotorama.data('fotorama');
+
 
     //=========================== Магия адаптивной верстки
     // Перестройка блоков контента на разных страницах на разных разрешениях
     function WindowSize() {
+        if ($('article').data('page') == 'index') {
         //  Страница услуг
-        if ($('.content-wrap').data('page') == 'services') {
+        } else if ($('.content-wrap').data('page') == 'services') {
             if($(window).width() <= 740) {
                 var count = $('.vertical-list:last-child .movable').length;
                 var half = count / 2 | 0;

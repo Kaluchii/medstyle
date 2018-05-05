@@ -60,27 +60,63 @@
             </div>
         </div>
         <div class="video-wrap">
-            <div class="video-block video-block--main-page">
-                <h2 class="video-block__title video-block__title--main-page">{{$video->title_field}}</h2>
-                <ul class="video-block__list video-block__list--main-page">
+            <div class="new-video">
+                <h2 class="new-video__title">Новые видео</h2>
+                <div class="new-video__list">
                     <?php $count_video = 0;?>
                     @foreach($video->videos_group as $item)
                         <?php $count_video++?>
                         @if($count_video <= 3)
-                            <li class="video-block__item video-block__item--main-page">
-                                <div class="video-block__video-wrap">
-                                    <div class="video-block__video video_player"
+                            <div class="new-video__item video-item">
+                                <div class="video-item__video-wrap">
+                                    <div class="video-item__video video_player"
                                          data-link="{{$item->link_field}}"
                                          data-preview="{{$item->wrap_image->primary_link}}">
                                     </div>
                                 </div>
-                                <div class="video-block__name-wrap">
-                                    <a href="{{$item->service_link_field}}" target="_blank" class="video-block__video-name pink-link">{{$item->name_field}}</a>
+                                <div class="video-item__name-wrap">
+                                    <a href="{{$item->service_link_field}}" target="_blank" class="video-item__video-name pink-link">{{$item->name_field}}</a>
                                 </div>
-                            </li>
+                            </div>
                         @endif
                     @endforeach
-                </ul>
+                </div>
+
+                <div class="new-video__list new-video__list--mobile js-fotorama-video">
+                    <?php $count_video = 0;?>
+                    @foreach($video->videos_group as $item)
+                        <?php $count_video++?>
+                        @if($count_video <= 2)
+                            <div class="new-video__item video-item">
+                                <div class="video-item__video-wrap video-item__video-wrap--main">
+                                    <div class="video-item__video video_player"
+                                         data-link="{{$item->link_field}}"
+                                         data-preview="{{$item->wrap_image->primary_link}}">
+                                    </div>
+                                </div>
+                                <div class="video-item__name-wrap">
+                                    <a href="{{$item->service_link_field}}" target="_blank" class="video-item__video-name pink-link">{{$item->name_field}}</a>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                        <div class="new-video__item all-videos">
+                            <a href="/video" class="all-videos__link">
+                                <span class="all-videos__link-text pink-link">Все видео</span>
+                            </a>
+                        </div>
+                </div>
+                <div class="new-video__btn-wrap">
+                    <a href="/video" class="new-video__btn">Смотреть все видео</a>
+                </div>
+                <a target="_blank" href="https://www.youtube.com/channel/UCE2HHrjCN11fRl1J6Fyj-Gw?sub_confirmation=1" class="new-video__subscribe new-video__subscribe--mobile">
+                    <p class="new-video__text new-video__text--mobile">Подпишитесь на наш YouTube-канал, чтобы узнавать о роликах сразу, как&nbsp;они&nbsp;вышли.</p>
+                    <img src="/img/youtube_play.png" alt="YouTube-канал Medstyle" class="new-video__play-img">
+                    <p class="new-video__link-wrap">
+                        <span class="new-video__link pink-link">Подписаться на YouTube</span>
+                    </p>
+                </a>
+                <p class="new-video__subscribe">Подпишитесь на наш <a target="_blank" href="https://www.youtube.com/channel/UCE2HHrjCN11fRl1J6Fyj-Gw?sub_confirmation=1" class="pink-link">YouTube-канал</a>, чтобы узнавать о роликах сразу, как они вышли.</p>
             </div>
         </div>
         <div class="block-shadow"><img src="/img/block_shadow.png" alt="Тень"></div>

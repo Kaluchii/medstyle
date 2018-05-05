@@ -9,7 +9,7 @@
             </div>
             <div class="footer-block">
                 <ul>
-                    <li><p class="footer-text">Запись на процедуры: <span class="phone">+7 (727) 311-31-81</span></p></li>
+                    <li><p class="footer-text">Запись на процедуры: <span class="phone ringo-phone">+7 (727) 311-31-81</span></p></li>
                     <li><p class="footer-text">WhatsApp: <span class="phone">+7 777 178-29-26</span></p></li>
                 </ul>
             </div>
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="footer-row">
-            <div class="col">Клиника эстетической медицины<br>в Алматы Medstyle, 2011–2017</div>
+            <div class="col">Клиника эстетической медицины<br>в Алматы Medstyle, 2011–2018</div>
             <div class="col">Сделано<br>в <a href="http://interpro.kz"  rel="nofollow">ИнтерПро</a></div>
         </div>
     </footer>

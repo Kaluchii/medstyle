@@ -9,7 +9,7 @@
         </a>
     </div>
     <div class="header-block">
-        <p class="right-text">+7 (727) 311-31-81</p>
+        <p class="right-text ringo-phone">+7 (727) 311-31-81</p>
     </div>
 </header>
 @endsection

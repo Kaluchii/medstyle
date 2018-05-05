@@ -65,6 +65,6 @@
             </div>
         </div>
     </article>
-
+@include('front.popups.consult')
 
 @endsection

@@ -80,8 +80,18 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-80787415-1', 'auto');
+  ga('require', 'ringostat');
   ga('send', 'pageview');
 
 </script>
-
+<script type="text/javascript">
+    (function (d,s,u,e,p) {
+        p=d.getElementsByTagName(s)[0],e=d.createElement(s),e.async=1,e.src=u,p.parentNode.insertBefore(e, p);
+    })(document, 'script', 'https://ringostat.com/numbers/v4/b9/b9b2dab3c77dc719f8fbb7f182e75dd792cec29e.js');
+</script>
+<!— BEGIN JIVOSITE CODE {literal} —>
+<script type='text/javascript'>
+(function(){ var widget_id = 'rc14jRjQnt';var d=document;var w=window;function l(){
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+<!— {/literal} END JIVOSITE CODE —>
 </html>

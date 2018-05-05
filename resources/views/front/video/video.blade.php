@@ -11,15 +11,15 @@
             </p>
             <ul class="video-block__list">
                 @foreach($video->videos_group as $item)
-                    <li class="video-block__item">
-                        <div class="video-block__video-wrap">
-                            <div class="video-block__video video_player"
+                    <li class="video-block__item video-item">
+                        <div class="video-item__video-wrap">
+                            <div class="video-item__video video_player"
                                  data-link="{{$item->link_field}}"
                                  data-preview="{{$item->wrap_image->primary_link}}">
                             </div>
                         </div>
-                        <div class="video-block__name-wrap">
-                            <a href="{{$item->service_link_field}}" target="_blank" class="video-block__video-name pink-link">{{$item->name_field}}</a>
+                        <div class="video-item__name-wrap">
+                            <a href="{{$item->service_link_field}}" target="_blank" class="video-item__video-name pink-link">{{$item->name_field}}</a>
                         </div>
                     </li>
                 @endforeach
