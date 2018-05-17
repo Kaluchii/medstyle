@@ -82,11 +82,11 @@
                     @endforeach
                 </div>
 
-                <div class="new-video__list new-video__list--mobile js-fotorama-video">
+                <div class="new-video__list new-video__list--mobile js-slick-video">
                     <?php $count_video = 0;?>
                     @foreach($video->videos_group as $item)
                         <?php $count_video++?>
-                        @if($count_video <= 2)
+                        @if($count_video <= 3)
                             <div class="new-video__item video-item">
                                 <div class="video-item__video-wrap video-item__video-wrap--main">
                                     <div class="video-item__video video_player"

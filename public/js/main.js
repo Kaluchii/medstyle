@@ -35,7 +35,25 @@ $(document).ready(function () {
         ]
     });
 
-    var $fotorama = $('.js-fotorama-video').fotorama({
+
+    $(".js-slick-video").slick({
+        dots: true,
+        arrows: false,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 841,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    /*var $fotorama = $('.js-fotorama-video').fotorama({
         arrows: false,
         maxwidth: '350px',
         ratio: "350/255",
@@ -43,7 +61,7 @@ $(document).ready(function () {
         click: false
     });
     // 2. Get the API object.
-    var fotorama = $fotorama.data('fotorama');
+    var fotorama = $fotorama.data('fotorama');*/
 
 
     //=========================== Магия адаптивной верстки

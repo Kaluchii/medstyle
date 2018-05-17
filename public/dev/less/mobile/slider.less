@@ -1,33 +1,32 @@
-@media screen and (max-width: 1024px) {
-  /*.fotorama{
-    margin: 0;
-    overflow: visible;
-    border-radius: 0;
-
-    &__desktop-img{
-      display: none;
-    }
-
-    &__mobile-img{
-      display: block;
-    }
-
-    &__nav-wrap{
-      bottom: -50px !important;
-    }
-  }*/
-}
-
 @media screen and (max-width: 940px) {
   .head-slider{
-    &__item{
-      //max-width: ~'calc(100vw - 60px)'!important;
+    .slick-slide{
+      &:nth-child(n){
+        width: 100%;
+      }
     }
-  }
 
-  .slick-slide{
-    &:nth-child(n){
-      width: 100%;
+    .slick-dots{
+      li{
+        height: 20px;
+        width: 20px;
+
+        button{
+          height: 20px;
+          width: 20px;
+          padding: 5px;
+
+          &:before{
+            content: "•";
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            border-radius: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -38,49 +37,6 @@
       max-width: ~'calc(100vw - 60px)'!important;
     }
   }
-}
-
-@media screen and (max-width: 768px) {
-  /*.fotorama{
-    .fotorama{
-      &__arr{
-        width: 60px;
-        opacity: .4 !important;
-        background: url("/img/hv.png") no-repeat center;
-        background-size: 20px 40px;
-      }
-    }
-  }*/
-}
-
-@media screen and (max-width: 520px) {
-  /*.fotorama{
-    .fotorama{
-      &__arr{
-        &--prev{
-          background-position: 30px center;
-        }
-
-        &--next{
-          background-position: 30px center;
-        }
-      }
-
-      &__nav__frame--dot{
-        width: 40px !important;
-
-        &.fotorama__active{
-          .fotorama__dot{
-            width: 40px;
-          }
-        }
-      }
-
-      &__dot{
-        width: 40px;
-      }
-    }
-  }*/
 }
 
 @media screen and (max-width: 420px) {
