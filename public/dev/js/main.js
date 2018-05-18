@@ -13,11 +13,52 @@ $(document).ready(function () {
             $(this).addClass('active').closest('.menu-item').addClass('active');
         }
     });
+
+    $(".js-slick").slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 941,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true
+                }
+            }
+        ]
+    });
+
+
+    $(".js-slick-video").slick({
+        dots: true,
+        arrows: false,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 841,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
     //=========================== Магия адаптивной верстки
     // Перестройка блоков контента на разных страницах на разных разрешениях
     function WindowSize() {
+        if ($('article').data('page') == 'index') {
         //  Страница услуг
-        if ($('.content-wrap').data('page') == 'services') {
+        } else if ($('.content-wrap').data('page') == 'services') {
             if($(window).width() <= 740) {
                 var count = $('.vertical-list:last-child .movable').length;
                 var half = count / 2 | 0;
@@ -152,11 +193,7 @@ $(document).ready(function () {
         }
     }).on('scroll', function(){
         if( $(window).scrollTop() >= menuTop ){
-            if ($('article').data('page') == 'index' || $(window).width() <= '1000') {
-                $('.main-menu').addClass('fixed');
-            }else {
-                $('.main-menu').removeClass('fixed');
-            }
+            $('.main-menu').addClass('fixed');
         }else {
             $('.main-menu').removeClass('fixed');
         }

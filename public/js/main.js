@@ -53,17 +53,6 @@ $(document).ready(function () {
         ]
     });
 
-    /*var $fotorama = $('.js-fotorama-video').fotorama({
-        arrows: false,
-        maxwidth: '350px',
-        ratio: "350/255",
-        minheight: '320px',
-        click: false
-    });
-    // 2. Get the API object.
-    var fotorama = $fotorama.data('fotorama');*/
-
-
     //=========================== Магия адаптивной верстки
     // Перестройка блоков контента на разных страницах на разных разрешениях
     function WindowSize() {
